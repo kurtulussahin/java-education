@@ -1,4 +1,4 @@
-package com.kurtulussahin.java.temeller.selam;
+package com.kurtulussahin.java.temeller.helloworld;
 
 public class SelamTest {
 

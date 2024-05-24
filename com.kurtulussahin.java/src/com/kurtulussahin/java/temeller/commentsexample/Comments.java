@@ -1,4 +1,4 @@
-package com.kurtulussahin.java.temeller.comments;
+package com.kurtulussahin.java.temeller.commentsexample;
 /**
  * @author <a href="mailto:kurtulussahin@gmail.com">Kurtuluş Şahin</a>
  *         <p>
