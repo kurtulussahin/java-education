@@ -1,4 +1,4 @@
-package com.kurtulussahin.java.hackerrank.plusminus;
+package com.kurtulussahin.java.problems.plusminus;
 
 import java.util.List;
 
