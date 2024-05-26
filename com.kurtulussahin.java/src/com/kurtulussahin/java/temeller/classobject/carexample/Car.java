@@ -15,7 +15,6 @@ public class Car{
 		return period;
 	}
 	
-	
 	public void accelerate(int newSpeed) {
 		speed = newSpeed;
 	}
