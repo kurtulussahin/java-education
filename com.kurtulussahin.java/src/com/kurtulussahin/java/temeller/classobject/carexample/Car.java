@@ -7,6 +7,7 @@ public class Car{
 	public String year;
 	public int speed;
 	public int distance;
+	public Person owner;
 	
 	public double go(int newDistance) {
 		distance += newDistance;
