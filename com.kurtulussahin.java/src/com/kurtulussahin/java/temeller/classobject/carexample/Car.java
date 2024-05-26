@@ -14,6 +14,7 @@ public class Car{
 		double period = (double )newDistance / speed;
 		return period;
 	}
+	
 
 	public void accelerate(int newSpeed) {
 		speed = newSpeed;
