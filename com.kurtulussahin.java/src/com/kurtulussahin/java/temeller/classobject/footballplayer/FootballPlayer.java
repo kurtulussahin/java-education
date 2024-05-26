@@ -1,4 +1,4 @@
-package com.kurtulussahin.java.temeller.footballplayer;
+package com.kurtulussahin.java.temeller.classobject.footballplayer;
 
 public class FootballPlayer {
 

@@ -1,4 +1,4 @@
-package com.kurtulussahin.java.temeller.carexample;
+package com.kurtulussahin.java.temeller.classobject.carexample;
 
 public class Car{
 
