@@ -1,4 +1,4 @@
-package com.kurtulussahin.java.temeller.helloworld;
+package src.com.kurtulussahin.java.temeller.helloworld;
 
 public class SelamTest {
 
@@ -17,3 +17,4 @@ public class SelamTest {
         System.out.println(cevap);
     }
 }
+

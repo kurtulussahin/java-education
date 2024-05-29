@@ -1,4 +1,4 @@
-package com.kurtulussahin.java.problems;
+package src.com.kurtulussahin.java.problems.sieveoferastosthenes;
 
 import java.util.Arrays;
 
