@@ -30,7 +30,7 @@ class ClassA {
     static int i = 5;
 
     private static double d1;
-    private static String name = "JAVA";
+    private static String name = "Java";
 
     static {
         System.out.println("i: " + i);
