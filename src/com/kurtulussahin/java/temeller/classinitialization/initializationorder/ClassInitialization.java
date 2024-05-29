@@ -1,4 +1,4 @@
-package src.com.kurtulussahin.java.temeller.classinitialization.initializationorder;
+package com.kurtulussahin.java.temeller.classinitialization.initializationorder;
 
 /*
  *Başlatma Sırası:

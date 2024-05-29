@@ -1,4 +1,4 @@
-package src.com.kurtulussahin.java.temeller.helloworld;
+package com.kurtulussahin.java.temeller.helloworld;
 
 public class Selam {
     String world = "millet ";

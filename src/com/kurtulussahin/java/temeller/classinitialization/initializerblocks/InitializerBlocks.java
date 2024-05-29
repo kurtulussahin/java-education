@@ -1,4 +1,4 @@
-package src.com.kurtulussahin.java.temeller.classinitialization.initializerblocks;
+package com.kurtulussahin.java.temeller.classinitialization.initializerblocks;
 
 public class InitializerBlocks {
 
