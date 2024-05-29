@@ -1,6 +1,6 @@
 package com.kurtulussahin.java.temeller.helloworld;
 
-public class Selam{
+public class Selam {
 	
 	String world = "millet"; 
 	
