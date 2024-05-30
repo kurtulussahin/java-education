@@ -10,7 +10,7 @@ public class Test {
         professor1.name = "Ahmet Arslan";
         
         Course course1 = new Course();
-        course1.name = "Int. to Software Engineering";
+        course1.name = "Int. to Software Engineering ";
         
         Student student1 = new Student();
         student1.name = "Akin Kaldiroglu";
