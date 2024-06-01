@@ -1,0 +1,37 @@
+--Bir metodun bir referans üzerinde çağrılıp çağrılamayacağı, derleme
+zamanında (compile-time) belirlenir. Çünkü bu karar, referansın tipine
+bakılarak alınır.
+--Referansın tipinde o metot varsa çağrılabilir yoksa çağrılamaz
+--Ama gerçekte hangi metodun çağrılacağı, referansın gösterdiği nesneye
+bağlı olduğundan ve bu da ancak çalışma zamanında belli olacağından,
+derleme zamanında bilinemez.
+
+
+--Operation (ya da message) daha çok bir kalıtım hiyerarşisinde birden
+fazla gerçekleştirmesi olan ve hiyerarşinin en tepesinde tanımlanan
+metodun arayüzünü, metot ise o hiyerarşideki gerçekleştirmeleri temsil
+eder.
+• Bu anlamda operation ile daha kavramsal olarak davranış (behavior) kastedilir.
+• Bir hiyerarşide bir operation ama o operationun birden fazla
+gerçekleştirmesi yani metodu bulunur.
+• Operation daha çok tasarım ve derleme zamanı, method ise derleme ve
+çalışma zamanı yapısıdır.
+
+
+Dillerde temelde iki bağlama zamanı önemlidir:
+• Statik bağlama (static binding): Statik bağlamada özelliklerin, dilin
+elemanlarıyla ilişkilendirmesi çalışma zamanından önce yapılır ve
+programın çalışması sırasında da değişmez.
+• Dinamic bağlama (dynamic binding): Dinamik bağlamada ise
+özelliklerin, dilin elemanlarıyla ilişkilendirmesi çalışma zamanında yapılır
+ve programın çalışması sırasında değişebilir.
+
+
+Java’da static, private veya final olan metotlar statik olarak
+bağlanırlar.
+• static metotlar, nesne üzerinde çağrılmazlar, sınıf üzerinde çağrılırlar.
+• Bu yüzden override edilemezler, polymorphic değildir ve bağlanmaları da statiktir.
+• private metotlar devralınmadığından override edilemezler ve
+bağlanmaları statiktir.
+• final metotlar devralınırlar ama override edilemezler ve bağlanmaları
+statiktir.
