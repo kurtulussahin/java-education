@@ -21,7 +21,7 @@ public class CollectionsUtilityClass {
 //		If all the items of a collection implement Comparable, Collections has min() and max() for finding the lowest values and max value of the collection based on natural ordering, respectively:
 
 		Collections.max(nameList);//Nicolai
-		Collections.min(nameList);//Ana
+		Collections.min(nameList);// Ana
 
 //		Frequency
 //
