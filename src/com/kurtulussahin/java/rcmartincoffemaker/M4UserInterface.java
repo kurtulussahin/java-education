@@ -10,6 +10,8 @@ implements Pollable {
 		int buttonStatus = api.getBrewButtonStatus();
 		if (buttonStatus == api.BREW_BUTTON_PUSHED) {
 			startBrewing();
+		}else {
+			System.out.println("buttonStatus=0");
 		}
 	}
 	public void done() {

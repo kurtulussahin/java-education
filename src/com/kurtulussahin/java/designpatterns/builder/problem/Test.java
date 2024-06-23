@@ -1,5 +1,14 @@
 package com.kurtulussahin.java.designpatterns.builder.problem;
 
+import com.kurtulussahin.java.designpatterns.builder.domain.CPU;
+import com.kurtulussahin.java.designpatterns.builder.domain.Computer;
+import com.kurtulussahin.java.designpatterns.builder.domain.Display;
+import com.kurtulussahin.java.designpatterns.builder.domain.GraphicCard;
+import com.kurtulussahin.java.designpatterns.builder.domain.HardDrive;
+import com.kurtulussahin.java.designpatterns.builder.domain.Keyboard;
+import com.kurtulussahin.java.designpatterns.builder.domain.Mouse;
+import com.kurtulussahin.java.designpatterns.builder.domain.RAM;
+
 public class Test {
 
 	public static void main(String[] args) {

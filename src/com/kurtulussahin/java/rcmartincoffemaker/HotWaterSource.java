@@ -14,6 +14,7 @@ public abstract class HotWaterSource {
 	public void start() {
 		isBrewing = true;
 		startBrewing();
+		System.out.println("hws start()");
 	}
 	public void done() {
 		isBrewing = false;

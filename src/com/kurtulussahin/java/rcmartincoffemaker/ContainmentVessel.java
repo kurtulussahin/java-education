@@ -16,6 +16,7 @@ public abstract class ContainmentVessel {
 	public void start() {
 		isBrewing = true;
 		isComplete = false;
+		System.out.println("cv started");
 	}
 	public void done() {
 		isBrewing = false;

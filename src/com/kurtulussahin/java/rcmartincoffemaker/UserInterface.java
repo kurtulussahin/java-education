@@ -18,8 +18,11 @@ public abstract class UserInterface {
 	protected void startBrewing() {
 		if (hws.isReady() && cv.isReady()) {
 			isComplete = false;
+			System.out.println("startBrewing");
 			hws.start();
 			cv.start();
+		}else {
+			System.out.println("not ready startBrewing");
 		}
 	}
 	public abstract void done();
