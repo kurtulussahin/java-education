@@ -1,7 +1,6 @@
 package com.kurtulussahin.java.ibtechproject.task1.operation;
 
 import com.kurtulussahin.java.ibtechproject.task1.bag.Bag;
-import com.kurtulussahin.java.ibtechproject.task1.dao.AccountDao;
 import com.kurtulussahin.java.ibtechproject.task1.dao.CustomerDao;
 import com.kurtulussahin.java.ibtechproject.task1.dao.PhoneDao;
 import com.kurtulussahin.java.ibtechproject.task1.model.Customer;
