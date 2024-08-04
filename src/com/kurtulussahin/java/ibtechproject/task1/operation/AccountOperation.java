@@ -9,7 +9,7 @@ public class AccountOperation implements CrudOperations {
 
 	private AccountDao accountDao;
 
-	public AccountOperation() {
+	private AccountOperation() {
 		this.accountDao = new AccountDao();
 	}
 	@Override

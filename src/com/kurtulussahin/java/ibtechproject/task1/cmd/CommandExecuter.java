@@ -4,6 +4,9 @@ import com.kurtulussahin.java.ibtechproject.task1.bag.Bag;
 import com.kurtulussahin.java.ibtechproject.task1.dao.CommandDao;
 import com.kurtulussahin.java.ibtechproject.task1.model.Command;
 import java.lang.reflect.*;
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class CommandExecuter {
 	public static Bag execute(String commandString, Bag bag) throws Exception {
@@ -15,7 +18,10 @@ public class CommandExecuter {
 			}
 
 			Class<?> c = Class.forName("com.kurtulussahin.java.ibtechproject.task1.operation." + command.getClassName());
-			Object obj = c.getDeclaredConstructor().newInstance();
+			printConstructorsData(c);
+			Constructor constructor = c.getDeclaredConstructor(); 
+			constructor.setAccessible(true); // if constructohr is private, make it public
+			Object obj = constructor.newInstance();
 			Method method;
 			Bag dbBag;
 			if (!bag.getMap().isEmpty()) {
@@ -45,4 +51,25 @@ public class CommandExecuter {
 				+ command.getCommandDescription() + "\n\t" + command.getClassName() + "\n\t" + command.getMethodName());
 		return true;
 	}
+	
+	private static void printConstructorsData(Class<?> clazz) {
+        Constructor<?> [] constructors = clazz.getDeclaredConstructors();
+
+        System.out.println(String.format("class %s has %d declared constructors", clazz.getSimpleName(), constructors.length));
+
+        for (int i = 0 ; i < constructors.length ; i++) {
+            Class<?> [] parameterTypes = constructors[i].getParameterTypes();
+
+            List<String> parameterTypeNames = Arrays.stream(parameterTypes)
+                    .map( type -> type.getSimpleName())
+                    .collect(Collectors.toList());
+            
+            System.out.println(parameterTypeNames);
+            if (parameterTypeNames.isEmpty()) {
+            	System.out.println("default constructor- no parameter");
+            }
+
+        }
+    }
+
 }
