@@ -1,53 +1,35 @@
 package com.kurtulussahin.java.rcmartinstackkata;
 
-public class Stack {
+public interface Stack {
 
 
 
-	private int size;
-	private int capacity;
-	private int elements[];
+	boolean isEmpty();
+
+	int getSize();
+
+	void push(int element);
+
+	int pop();
 	
-	public static Stack Make(int capacity) {
-		return new Stack(capacity);
-	}
+	int top();
 	
-	private Stack(int capacity) {
-		this.capacity=capacity;
-		elements=new int[capacity];
-	}
-
-	public boolean isEmpty() {
-		return size==0;
-	}
-
-	public int getSize() {
-		return size;
-	}
-
-	public void push(int element) {
-		if(size==capacity) {
-			throw new Overflow();
-		}
-		this.elements[size]=element;
-		size++;
-	}
-
-	public int pop() {
-		if(size==0) {
-			throw new Underflow();
-		}
-		--size;
-		return elements[size];
-	}
+	Integer find(int element);
 	
-	public class Overflow extends RuntimeException {
+	public static class IllegalCapacity extends RuntimeException {
 
 	}
+	public static class Empty extends RuntimeException {
+
+	}
+	public static class Overflow extends RuntimeException {
 	
-
-	public class Underflow extends RuntimeException {
-
 	}
+	public static class Underflow extends RuntimeException {
+	
+	}
+
+
+
 
 }
