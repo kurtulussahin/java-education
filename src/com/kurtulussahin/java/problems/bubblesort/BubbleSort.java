@@ -1,6 +1,6 @@
-package com.kurtulussahin.java.problems.booblesort;
+package com.kurtulussahin.java.problems.bubblesort;
 
-public class BoobleSort {
+public class BubbleSort {
 	public static int[] sortNumsAscending(int[] nums) {
 	       int temp;
 	      for(int i=0; i<nums.length; i++){

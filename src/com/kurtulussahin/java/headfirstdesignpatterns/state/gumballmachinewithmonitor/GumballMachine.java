@@ -1,4 +1,4 @@
-package com.kurtulussahin.java.headfirstdesignpatterns.proxy.gumballmachinewithmonitor;
+package com.kurtulussahin.java.headfirstdesignpatterns.state.gumballmachinewithmonitor;
 
 public class GumballMachine {
 
