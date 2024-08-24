@@ -1,4 +1,4 @@
-package com.kurtulussahin.java.rcmartincoffemaker;
+package com.kurtulussahin.java.robertcmartin.rcmartincoffemaker;
 
 public abstract class HotWaterSource {
 	private UserInterface ui;

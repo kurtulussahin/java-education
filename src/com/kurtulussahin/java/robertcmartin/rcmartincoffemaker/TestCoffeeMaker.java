@@ -1,17 +1,15 @@
-package com.kurtulussahin.java.rcmartincoffemaker;
+package com.kurtulussahin.java.robertcmartin.rcmartincoffemaker;
 
+import junit.framework.TestCase;
+import junit.textui.TestRunner;
 
-public class TestCoffeeMaker2 {
-	
-	public static void main(String[] args) throws Exception {
-		
-		TestCoffeeMaker2 tester = new TestCoffeeMaker2();
-		tester.setUp();
-		tester.api.buttonPressed = true;
-		tester.poll();
-		
+public class TestCoffeeMaker extends TestCase {
+	public static void main(String[] args) {
+		TestRunner.main(new String[]{"TestCoffeeMaker"});
 	}
-	
+	public TestCoffeeMaker(String name) {
+		super(name);
+	}
 	private M4UserInterface ui;
 	private M4HotWaterSource hws;
 	private M4ContainmentVessel cv;

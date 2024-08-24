@@ -1,4 +1,4 @@
-package com.kurtulussahin.java.rcmartincoffemaker;
+package com.kurtulussahin.java.robertcmartin.rcmartincoffemaker;
 
 public class CoffeeMaker {
 	public static void main(String[] args) {

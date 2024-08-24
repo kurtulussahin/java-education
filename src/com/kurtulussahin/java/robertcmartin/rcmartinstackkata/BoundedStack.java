@@ -1,4 +1,4 @@
-package com.kurtulussahin.java.rcmartinstackkata;
+package com.kurtulussahin.java.robertcmartin.rcmartinstackkata;
 
 public class BoundedStack implements Stack {
 

@@ -1,4 +1,4 @@
-package com.kurtulussahin.java.rcmartinstackkata;
+package com.kurtulussahin.java.robertcmartin.rcmartinstackkata;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;

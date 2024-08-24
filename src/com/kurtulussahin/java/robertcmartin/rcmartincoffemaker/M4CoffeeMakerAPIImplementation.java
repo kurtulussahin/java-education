@@ -1,4 +1,4 @@
-package com.kurtulussahin.java.rcmartincoffemaker;
+package com.kurtulussahin.java.robertcmartin.rcmartincoffemaker;
 
 class M4CoffeeMakerAPIImplementation implements CoffeeMakerAPI {
 	public boolean buttonPressed;

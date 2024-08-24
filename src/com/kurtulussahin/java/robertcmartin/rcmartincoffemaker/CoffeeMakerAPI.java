@@ -1,4 +1,4 @@
-package com.kurtulussahin.java.rcmartincoffemaker;
+package com.kurtulussahin.java.robertcmartin.rcmartincoffemaker;
 
 public interface CoffeeMakerAPI {
 	public static CoffeeMakerAPI api = null; // set by main.
