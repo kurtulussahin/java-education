@@ -2,6 +2,10 @@ package com.kurtulussahin.java.robertcmartin.videostore.refactor;
 
 public class Rental
 {
+	
+	private Movie movie;
+	private int daysRented;
+	
 	public Rental (Movie movie, int daysRented) {
 		this.movie 		= movie;
 		this.daysRented = daysRented;
@@ -10,11 +14,16 @@ public class Rental
 	public int getDaysRented () {
 		return daysRented;
 	}
-	
-	public Movie getMovie () {
-		return movie;
+
+	public String getTitle() {
+		return movie.getTitle();
 	}
 	
-	private Movie movie;
-	private int daysRented;
+	double determineAmount() {
+		return movie.determineAmount(daysRented);
+	}
+	
+	int determineFrequentRenterPoints() {
+		return movie.determineFrequentRenterPoints(daysRented);
+	}
 }
