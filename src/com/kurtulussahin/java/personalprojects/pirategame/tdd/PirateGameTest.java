@@ -1,4 +1,4 @@
-package com.kurtulussahin.java.pirategame.tdd;
+package com.kurtulussahin.java.personalprojects.pirategame.tdd;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
@@ -7,7 +7,7 @@ import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Test;
 
-import com.kurtulussahin.java.pirategame.refactor.Ship;
+import com.kurtulussahin.java.personalprojects.pirategame.refactor.Ship;
 
 public class PirateGameTest {
 	

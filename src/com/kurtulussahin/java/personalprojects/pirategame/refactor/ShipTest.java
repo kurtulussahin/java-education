@@ -1,4 +1,4 @@
-package com.kurtulussahin.java.pirategame.refactor;
+package com.kurtulussahin.java.personalprojects.pirategame.refactor;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;

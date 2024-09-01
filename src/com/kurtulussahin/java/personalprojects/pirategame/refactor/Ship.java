@@ -1,4 +1,4 @@
-package com.kurtulussahin.java.pirategame.refactor;
+package com.kurtulussahin.java.personalprojects.pirategame.refactor;
 
 import java.util.HashMap;
 import java.util.Map;

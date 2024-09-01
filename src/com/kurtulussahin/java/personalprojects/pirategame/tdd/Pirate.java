@@ -1,4 +1,4 @@
-package com.kurtulussahin.java.pirategame.tdd;
+package com.kurtulussahin.java.personalprojects.pirategame.tdd;
 
 public class Pirate {
 	
