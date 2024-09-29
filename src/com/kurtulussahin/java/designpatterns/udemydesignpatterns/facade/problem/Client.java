@@ -1,6 +1,9 @@
 package com.kurtulussahin.java.designpatterns.udemydesignpatterns.facade.problem;
 
-import com.kurtulussahin.java.designpatterns.udemydesignpatterns.facade.computer.*;
+import com.kurtulussahin.java.designpatterns.udemydesignpatterns.facade.computer.CPU;
+import com.kurtulussahin.java.designpatterns.udemydesignpatterns.facade.computer.Display;
+import com.kurtulussahin.java.designpatterns.udemydesignpatterns.facade.computer.HardDrive;
+import com.kurtulussahin.java.designpatterns.udemydesignpatterns.facade.computer.RAM;
 
 public class Client {
 	

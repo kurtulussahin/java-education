@@ -1,6 +1,5 @@
 package com.kurtulussahin.java.designpatterns.udemydesignpatterns.iterator.dinnermenuiterator;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class PancakeHouseMenuIterator implements Iterator {

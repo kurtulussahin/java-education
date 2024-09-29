@@ -1,9 +1,10 @@
 
 package com.kurtulussahin.java.designpatterns.udemydesignpatterns.composite.filesystem;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
-import com.kurtulussahin.java.designpatterns.udemydesignpatterns.composite.filesystem.iterator.*;
+import com.kurtulussahin.java.designpatterns.udemydesignpatterns.composite.filesystem.iterator.DirectoryIterator;
 
 public class Directory extends StorageElement implements StorageContainer {
 	List<Storage> elements = new ArrayList<Storage>();

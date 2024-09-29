@@ -4,10 +4,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Test;
-
-import com.kurtulussahin.java.personalprojects.pirategame.refactor.Ship;
 
 public class PirateGameTest {
 	

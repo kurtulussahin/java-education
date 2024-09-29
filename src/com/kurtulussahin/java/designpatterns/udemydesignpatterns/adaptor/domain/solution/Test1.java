@@ -1,7 +1,9 @@
 package com.kurtulussahin.java.designpatterns.udemydesignpatterns.adaptor.domain.solution;
 
-import com.kurtulussahin.java.designpatterns.udemydesignpatterns.adaptor.domain.tr.*;
-import com.kurtulussahin.java.designpatterns.udemydesignpatterns.adaptor.domain.us.*;
+import com.kurtulussahin.java.designpatterns.udemydesignpatterns.adaptor.domain.tr.Appliance;
+import com.kurtulussahin.java.designpatterns.udemydesignpatterns.adaptor.domain.tr.TurkishHomeAppliance;
+import com.kurtulussahin.java.designpatterns.udemydesignpatterns.adaptor.domain.us.USPowerProvider;
+import com.kurtulussahin.java.designpatterns.udemydesignpatterns.adaptor.domain.us.USPowerSource;
 
 public class Test1 {
 

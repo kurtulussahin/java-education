@@ -3,7 +3,7 @@ package com.kurtulussahin.java.designpatterns.udemydesignpatterns.composite.file
 
 import java.util.List;
 
-import com.kurtulussahin.java.designpatterns.udemydesignpatterns.composite.filesystem.iterator.*;
+import com.kurtulussahin.java.designpatterns.udemydesignpatterns.composite.filesystem.iterator.DirectoryIterator;
 
 public interface StorageContainer {
 	

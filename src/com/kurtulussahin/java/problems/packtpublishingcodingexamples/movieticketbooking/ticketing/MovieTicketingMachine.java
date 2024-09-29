@@ -5,10 +5,10 @@ import java.util.List;
 
 import com.kurtulussahin.java.problems.packtpublishingcodingexamples.movieticketbooking.cinema.Cinema;
 import com.kurtulussahin.java.problems.packtpublishingcodingexamples.movieticketbooking.cinema.CinemaRoom;
+import com.kurtulussahin.java.problems.packtpublishingcodingexamples.movieticketbooking.cinema.CinemaRoom.Cartridge;
 import com.kurtulussahin.java.problems.packtpublishingcodingexamples.movieticketbooking.cinema.Movie;
 import com.kurtulussahin.java.problems.packtpublishingcodingexamples.movieticketbooking.cinema.MovieTicket;
 import com.kurtulussahin.java.problems.packtpublishingcodingexamples.movieticketbooking.cinema.Seat;
-import com.kurtulussahin.java.problems.packtpublishingcodingexamples.movieticketbooking.cinema.CinemaRoom.Cartridge;
 
 public class MovieTicketingMachine implements MovieTicketing {
     

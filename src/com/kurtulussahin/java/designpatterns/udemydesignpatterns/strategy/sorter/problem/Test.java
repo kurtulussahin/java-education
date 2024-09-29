@@ -1,7 +1,5 @@
 package com.kurtulussahin.java.designpatterns.udemydesignpatterns.strategy.sorter.problem;
 
-import com.kurtulussahin.java.designpatterns.udemydesignpatterns.strategy.*;
-
 public class Test {
 	private static Sorter sorter;
 

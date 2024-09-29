@@ -1,7 +1,5 @@
 package com.kurtulussahin.java.temeller.loop;
 
-import java.util.Random;
-
 public class ForEach {
 
 	public static void main(String[] args) {

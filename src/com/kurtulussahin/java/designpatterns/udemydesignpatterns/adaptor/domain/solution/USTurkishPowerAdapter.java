@@ -1,7 +1,7 @@
 package com.kurtulussahin.java.designpatterns.udemydesignpatterns.adaptor.domain.solution;
 
-import com.kurtulussahin.java.designpatterns.udemydesignpatterns.adaptor.domain.tr.*;
-import com.kurtulussahin.java.designpatterns.udemydesignpatterns.adaptor.domain.us.*;
+import com.kurtulussahin.java.designpatterns.udemydesignpatterns.adaptor.domain.tr.TurkishPowerSource;
+import com.kurtulussahin.java.designpatterns.udemydesignpatterns.adaptor.domain.us.USPowerSource;
 
 public class USTurkishPowerAdapter implements TurkishPowerSource {
 	private USPowerSource usPowerSource;

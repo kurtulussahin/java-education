@@ -1,7 +1,5 @@
 package com.kurtulussahin.java.temeller.initializerblocks;
 
-import java.util.Random;
-
 public class InitializerBlocks {
 
 	double d;

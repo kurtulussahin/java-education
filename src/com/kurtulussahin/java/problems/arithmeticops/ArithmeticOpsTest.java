@@ -1,6 +1,7 @@
 package com.kurtulussahin.java.problems.arithmeticops;
 
-import static org.junit.Assert.assertEquals; 
+import static org.junit.Assert.assertEquals;
+
 import org.junit.Test; 
 
 public class ArithmeticOpsTest {

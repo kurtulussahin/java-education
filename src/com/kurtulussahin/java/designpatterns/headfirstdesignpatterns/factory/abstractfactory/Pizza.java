@@ -1,7 +1,5 @@
 package com.kurtulussahin.java.designpatterns.headfirstdesignpatterns.factory.abstractfactory;
 
-import java.util.ArrayList;
-
 import com.kurtulussahin.java.designpatterns.headfirstdesignpatterns.factory.abstractfactory.ingredients.Cheese;
 import com.kurtulussahin.java.designpatterns.headfirstdesignpatterns.factory.abstractfactory.ingredients.Clams;
 import com.kurtulussahin.java.designpatterns.headfirstdesignpatterns.factory.abstractfactory.ingredients.Dough;

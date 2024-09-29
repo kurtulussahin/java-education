@@ -1,11 +1,11 @@
 
 package com.kurtulussahin.java.designpatterns.udemydesignpatterns.composite.filesystem.iterator;
 
-import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-import com.kurtulussahin.java.designpatterns.udemydesignpatterns.composite.filesystem.*;
+import com.kurtulussahin.java.designpatterns.udemydesignpatterns.composite.filesystem.Directory;
+import com.kurtulussahin.java.designpatterns.udemydesignpatterns.composite.filesystem.Storage;
 
 public class DirectoryIterator implements StorageIterator {
 	private Directory dir;

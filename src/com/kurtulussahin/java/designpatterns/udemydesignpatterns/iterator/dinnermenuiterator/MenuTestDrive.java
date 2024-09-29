@@ -1,6 +1,7 @@
 package com.kurtulussahin.java.designpatterns.udemydesignpatterns.iterator.dinnermenuiterator;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.List;
 
 public class MenuTestDrive {
 	public static void main(String args[]) {

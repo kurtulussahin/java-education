@@ -1,7 +1,7 @@
 package com.kurtulussahin.java.temeller.immutable;
 
 	import java.util.Collections;
-	import java.util.List;
+import java.util.List;
 
 	public final class ImmutableAdress {
 		private final String name;
