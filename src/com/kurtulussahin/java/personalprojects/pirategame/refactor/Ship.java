@@ -4,8 +4,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Ship {
-    private int numberOfPirates;
-    private int numberOfGolds;
+    private final int numberOfPirates;
+    private final int numberOfGolds;
     private Map<Integer, Integer> proposal = new HashMap<>();;
     
     private Map<Integer, Integer> previousProposal = new HashMap<>();
@@ -20,19 +20,19 @@ public class Ship {
         int controlDeath = 0;
         int controlDeathRepetition = 0;
         previousProposal.put(1, 100);
-        
-       
 
-        for (int k = 1; k <= numberOfPirates; k++) {
+
+        int k = 1;
+        while (k <= numberOfPirates) {
             int purposeIncrease = 0;
-            
+
             int sufficientNumberOfVotes = calculateSufficientNumberOfVotes(isFiftyPercentEnough, isProposerVote, numberOfTurn);
 
             int  numberOfYesVote;
-            if (!isProposerVote) {
-            	numberOfYesVote=0;
-            }else {
+            if (isProposerVote) {
             	numberOfYesVote=1;
+            } else {
+            	numberOfYesVote=0;
             }
             proposal=putDefaultOffers(numberOfTurn);
 
@@ -65,7 +65,7 @@ public class Ship {
                                     proposal.put(j, previousProposal.get(j));
                                     if (controlDeathRepetition != 2) {
                                         controlDeath--;
-                                    }  
+                                    }
                                 } else {
                                     proposal.put(j, previousProposal.get(j) + 1);
                                     controlDeathRepetition--;
@@ -95,14 +95,15 @@ public class Ship {
                 }
                 checkPirateNumber++;
             }
-            
-            
-            
+
+
+
 
             numberOfTurn++;
             purposeIncrease--;
+            k++;
         }
-        
+
         int[] result = new int[numberOfPirates];
         for (int i = numberOfTurn - 1; i >= 1; i--) {
             System.out.print(proposal.get(i) + "-");
@@ -154,10 +155,10 @@ public class Ship {
 
         Ship ship = new Ship(5,100 );
         int[] result = ship.makeAProposal(overboardHTML, fiftyPercentHTML, proposerVoteHTML);
-        
-        for (int i = 0; i<result.length; i++) {
-            System.out.print(result[i]+ "-");
-            
+
+        for (int j : result) {
+            System.out.print(j + "-");
+
         }
     }
 }

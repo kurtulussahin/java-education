@@ -29,10 +29,10 @@ public class GildedRoseApprovalTest {
 	  }
 
 	  @Test
-	  public void makeSureOutputMatchesGold() throws Exception {
+	  public void makeSureOutputMatchesgildedRoseOutputTestFile() throws Exception {
 		Program.main();
 	    BufferedReader lead = new BufferedReader(new FileReader("src/com/kurtulussahin/java/codekata/emilybache/gildedrose/lead"));
-	    BufferedReader gold = new BufferedReader(new FileReader("src/com/kurtulussahin/java/codekata/emilybache/gildedrose/gold"));
+	    BufferedReader gold = new BufferedReader(new FileReader("src/com/kurtulussahin/java/codekata/emilybache/gildedrose/gildedRoseOutputTestFile"));
 	    String line;
 	    while ((line = gold.readLine()) != null) {
 	      assertEquals(line, lead.readLine());

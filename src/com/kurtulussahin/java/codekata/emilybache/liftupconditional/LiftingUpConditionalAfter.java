@@ -3,15 +3,15 @@ package com.kurtulussahin.java.codekata.emilybache.liftupconditional;
 public class LiftingUpConditionalAfter {
 
     public static String liftUpConditional(boolean a, boolean b) {
-        if (a) {
-            if (b) {
+        if (b) {
+            if (a) {
                 return "ATrueBTrue";
             } else {
-                return "ATrueBFalse";
+                return "AFalseBTrue";
             }
         } else {
-            if (b) {
-                return "AFalseBTrue";
+            if (a) {
+                return "ATrueBFalse";
             } else {
                 return "AFalseBFalse";
             }
