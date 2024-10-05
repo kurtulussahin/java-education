@@ -4,7 +4,6 @@ public class tragedyPlay implements Play {
     public String name;
 
     public tragedyPlay(String name) {
-
         this.name = name;
     }
 
