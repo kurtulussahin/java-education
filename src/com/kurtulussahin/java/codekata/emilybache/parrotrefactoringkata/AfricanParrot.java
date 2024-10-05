@@ -1,8 +1,12 @@
 package com.kurtulussahin.java.codekata.emilybache.parrotrefactoringkata;
 
-public class AfricanParrot extends Parrot {
-    protected AfricanParrot(int numberOfCoconuts, double voltage, boolean isNailed) {
-        super(numberOfCoconuts, voltage, isNailed);
+public class AfricanParrot implements Parrot {
+    protected int numberOfCoconuts;
+
+    protected AfricanParrot(int numberOfCoconuts) {
+        super();
+        this.numberOfCoconuts = numberOfCoconuts;
+
     }
 
     @Override
@@ -13,5 +17,13 @@ public class AfricanParrot extends Parrot {
     @Override
     public String getCry() {
         return "Sqaark!";
+    }
+
+    protected double getLoadFactor() {
+        return 9.0;
+    }
+
+    protected double getBaseSpeed() {
+        return 12.0;
     }
 }

@@ -1,8 +1,9 @@
 package com.kurtulussahin.java.codekata.emilybache.parrotrefactoringkata;
 
-public class EuropeanParrot extends Parrot {
-    public EuropeanParrot(int numberOfCoconuts, double voltage, boolean isNailed) {
-        super(numberOfCoconuts,  voltage,  isNailed);
+public class EuropeanParrot implements Parrot {
+
+    public EuropeanParrot() {
+        super();
     }
 
     @Override
@@ -13,5 +14,9 @@ public class EuropeanParrot extends Parrot {
     @Override
     public String getCry() {
         return "Sqoork!";
+    }
+
+    protected double getBaseSpeed() {
+        return 12.0;
     }
 }

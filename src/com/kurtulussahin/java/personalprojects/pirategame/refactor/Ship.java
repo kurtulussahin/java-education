@@ -56,39 +56,37 @@ public class Ship {
                         proposal.put(numberOfTurn, currentValue - proposal.get(i));
                     }
                     previousProposal = new HashMap<>(proposal);
-                } else {
-                    if (isOverboard) {
-                        for (int j = 1; j < proposal.size(); j++) {
-                            if (previousProposal.get(j) == purposeIncrease) {
-                                controlDeathRepetition++;
-                                if (controlDeath > 0) {
-                                    proposal.put(j, previousProposal.get(j));
-                                    if (controlDeathRepetition != 2) {
-                                        controlDeath--;
-                                    }
-                                } else {
-                                    proposal.put(j, previousProposal.get(j) + 1);
-                                    controlDeathRepetition--;
+                } else if (isOverboard) {
+                    for (int j = 1; j < proposal.size(); j++) {
+                        if (previousProposal.get(j) == purposeIncrease) {
+                            controlDeathRepetition++;
+                            if (controlDeath > 0) {
+                                proposal.put(j, previousProposal.get(j));
+                                if (controlDeathRepetition != 2) {
+                                    controlDeath--;
                                 }
-                                numberOfYesVote++;
+                            } else {
+                                proposal.put(j, previousProposal.get(j) + 1);
+                                controlDeathRepetition--;
+                            }
+                            numberOfYesVote++;
 
-                                if (sufficientNumberOfVotes == numberOfYesVote) {
-                                    j = proposal.size();
-                                    previousProposal = new HashMap<>(proposal);
-                                }
+                            if (sufficientNumberOfVotes == numberOfYesVote) {
+                                j = proposal.size();
+                                previousProposal = new HashMap<>(proposal);
                             }
                         }
-                        purposeIncrease++;
-                    } else {
-                        for (int k1 = 1; k1 < proposal.size(); k1++) {
-                            if (previousProposal.get(k1) == purposeIncrease) {
-                                proposal.put(k1, previousProposal.get(k1));
-                                numberOfYesVote++;
+                    }
+                    purposeIncrease++;
+                } else {
+                    for (int k1 = 1; k1 < proposal.size(); k1++) {
+                        if (previousProposal.get(k1) == purposeIncrease) {
+                            proposal.put(k1, previousProposal.get(k1));
+                            numberOfYesVote++;
 
-                                if (sufficientNumberOfVotes == numberOfYesVote) {
-                                    k1 = proposal.size();
-                                    previousProposal = new HashMap<>(proposal);
-                                }
+                            if (sufficientNumberOfVotes == numberOfYesVote) {
+                                k1 = proposal.size();
+                                previousProposal = new HashMap<>(proposal);
                             }
                         }
                     }
