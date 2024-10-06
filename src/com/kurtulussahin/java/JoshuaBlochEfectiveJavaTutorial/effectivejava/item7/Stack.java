@@ -43,17 +43,47 @@ public class Stack {
 		return result;
 		
 	}
-		
-	/**
-	     * Ensure space for at least one more element, roughly
-	     * doubling the capacity each time the array needs to grow.
-     */
+
 	private void ensureCapacity()
 	{
 		if(elements.length == size)
 		{
 			elements = Arrays.copyOf(elements, 2 * size + 1);
 		}
+	}
+
+	public static void stackPopWellTest() {
+		Stack stack = new Stack();
+		HeapUtility.heapPrinter();
+		for (int i = 1; i < 10000000; i++)
+		{
+			stack.push(i);
+		}
+		HeapUtility.heapPrinter();
+		for (int i = 1; i < 10000000; i++)
+		{
+
+			stack.popWell();
+		}
+		System.gc();
+		HeapUtility.heapPrinter();
+	}
+
+	public static void stackPopTest() {
+		Stack stack = new Stack();
+		HeapUtility.heapPrinter();
+		for (int i = 1; i < 10000000; i++)
+		{
+			stack.push(i);
+		}
+		HeapUtility.heapPrinter();
+		for (int i = 1; i < 10000000; i++)
+		{
+
+			stack.pop();
+		}
+		System.gc();
+		HeapUtility.heapPrinter();
 	}
 	
 }
