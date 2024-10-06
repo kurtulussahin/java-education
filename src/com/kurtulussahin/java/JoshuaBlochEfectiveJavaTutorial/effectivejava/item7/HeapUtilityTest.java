@@ -6,14 +6,14 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class HeapUtilityTest {
 
-    //Run if you have time
     @Test
     void outOfMemoryErrorCreator() {
-        HeapUtility.heapLoader(1000000);
+        //HeapUtility.OutOfMemoryErrorCreator();
     }
 
+    //Run if you have time
     @Test
     void heapLoader() {
-        //TODO
+        HeapUtility.heapLoader(1000000);
     }
 }

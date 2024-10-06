@@ -10,7 +10,6 @@ public class GarbageCollection {
 		System.out.println("***********************Çöpler temizlendi.***********");
 	}
 	public static void main(String[] args) {
-
 		GarbageCollection ali = new GarbageCollection();
 		GarbageCollection mehmet = new GarbageCollection();
 		GarbageCollection sıla = new GarbageCollection();

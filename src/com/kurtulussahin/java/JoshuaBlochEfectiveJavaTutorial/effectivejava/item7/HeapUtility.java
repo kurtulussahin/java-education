@@ -12,9 +12,9 @@ public class HeapUtility {
     }
 
     public static void OutOfMemoryErrorCreator(){
-        List<HeapUtility> list = new ArrayList<>();
+        List<int[]> list = new ArrayList<>();
         while(true) {
-            list.add(new HeapUtility());
+            list.add(new int[100000]);
         }
     }
 
