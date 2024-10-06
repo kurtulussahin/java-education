@@ -2,18 +2,18 @@ package com.kurtulussahin.java.JoshuaBlochEfectiveJavaTutorial.effectivejava.ite
 
 public class Fenerbahce {
 	
-	private String yeniFutbolcu;
+	private String name;
 	private int age;
 	
-	public Fenerbahce(String yeniFutbolcu, int age) {
+	public Fenerbahce(String name, int age) {
 		// TODO Auto-generated constructor stub
-		this.yeniFutbolcu = yeniFutbolcu;
+		this.name = name;
 		this.age = age;
 	}
 	
-	public Fenerbahce(String yeniTeknikDirektor) {
+	public Fenerbahce(String name) {
 		// TODO Auto-generated constructor stub
-		this.yeniFutbolcu = yeniFutbolcu;
+		this.name = name;
 	}
 	
 	
@@ -21,10 +21,9 @@ public class Fenerbahce {
 	{
 		return new Fenerbahce(yeniFutbolcu, 22);
 	}
-	
-	
 
-	
-	
 
+    public int getAge() {
+        return age;
+    }
 }

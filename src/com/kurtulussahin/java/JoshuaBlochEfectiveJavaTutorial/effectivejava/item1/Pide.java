@@ -3,9 +3,4 @@ package com.kurtulussahin.java.JoshuaBlochEfectiveJavaTutorial.effectivejava.ite
 public class Pide extends Yemek {
 
 
-
-
-	
-
-
 }
