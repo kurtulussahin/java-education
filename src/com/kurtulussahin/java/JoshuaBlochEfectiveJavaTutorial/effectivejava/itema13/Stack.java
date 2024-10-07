@@ -49,11 +49,10 @@ public class Stack implements Cloneable{
 	}
 	
 	
-	// Clone method for class with references to mutable state
-	@Override
-	public Stack clone() {
+
+	public Stack deeperClone() {
 		try {
-			Stack result = (Stack) super.clone();
+			Stack result = (Stack) this.clone();
 			result.elements = elements.clone();
 			return result;
 		} catch (CloneNotSupportedException e) {
@@ -61,28 +60,70 @@ public class Stack implements Cloneable{
 		}
 	}
 	
-//	public Object clone()throws CloneNotSupportedException{  
-//	return super.clone();  
-//	}  
-	
 
 	// To see that clone works, call with several command line arguments
-	public static void main(String[] args)  {
-		
+	public static void main(String[] args) throws CloneNotSupportedException {
+
+		shallowCopyChangeReferanceValue();
+		System.out.println();
+		shallowCopyChangeObjectOfReferance();
+		System.out.println();
+		deeperCloneChangeOneLevelObjectOfReferance();
+	}
+
+	private static void shallowCopyChangeReferanceValue() throws CloneNotSupportedException {
 		Stack stack = new Stack();
-		
+
 		String[] numaralar = {"1", "2", "3", "4"};
 		for (String arg : numaralar)
 			stack.push(arg);
-		
-		Stack copy = stack.clone();
-		
-	
+
+		Stack copy = (Stack) stack.clone();
+		String[] harfler = {"X", "Y", "Z", "Q"};
+		stack.elements=harfler;
+
 		while (!stack.isEmpty())
 			System.out.print(stack.pop() + " ");
-		
+
 		System.out.println();
-	
+
+		while (!copy.isEmpty())
+			System.out.print(copy.pop() + " ");
+	}
+
+
+	private static void shallowCopyChangeObjectOfReferance() throws CloneNotSupportedException {
+		Stack stack = new Stack();
+
+		String[] numaralar = {"1", "2", "3", "4"};
+		for (String arg : numaralar)
+			stack.push(arg);
+
+		Stack copy = (Stack) stack.clone();
+
+		while (!stack.isEmpty())
+			System.out.print(stack.pop() + " ");
+
+		System.out.println();
+
+		while (!copy.isEmpty())
+			System.out.print(copy.pop() + " ");
+	}
+
+	private static void deeperCloneChangeOneLevelObjectOfReferance() throws CloneNotSupportedException {
+		Stack stack = new Stack();
+
+		String[] numaralar = {"1", "2", "3", "4"};
+		for (String arg : numaralar)
+			stack.push(arg);
+
+		Stack copy = (Stack) stack.deeperClone();
+
+		while (!stack.isEmpty())
+			System.out.print(stack.pop() + " ");
+
+		System.out.println();
+
 		while (!copy.isEmpty())
 			System.out.print(copy.pop() + " ");
 	}
