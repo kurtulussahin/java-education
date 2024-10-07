@@ -34,7 +34,7 @@ class ObjectCopyTest {
 
         object2= (ObjectCopy) object1.clone();
 
-        assertTrue(object1.getReferenceVarable()==object2.getReferenceVarable());
+        assertTrue(object1.aReferenceVarable==object2.aReferenceVarable);
     }
 
     @Test
@@ -42,17 +42,28 @@ class ObjectCopyTest {
 
         object2= (ObjectCopy) object1.clone();
 
-        object2.setReferenceVariable(null);
-        assertFalse(object1.getReferenceVarable()==object2.getReferenceVarable());
+        object2.aReferenceVarable=null;
+        assertFalse(object1.aReferenceVarable==object2.aReferenceVarable);
     }
 
     @Test
     void shallowCopyTurnsFalseForOneOfInstanceVariableChangeEqualityOperator() throws CloneNotSupportedException {
 
         object2= (ObjectCopy) object1.clone();
-        assertTrue(object1.getReferenceVarable()==object2.getReferenceVarable());
-        object2.setReferenceVariable("z");
-        assertFalse(object1.getReferenceVarable()==object2.getReferenceVarable());
+        assertTrue(object1.aReferenceVarable==object2.aReferenceVarable);
+        object2.aReferenceVarable="z";
+        assertFalse(object1.aReferenceVarable==object2.aReferenceVarable);
+    }
+
+    @Test
+    void shallowCopyTurnsTrueForOneOfInstanceVariablesObjectChangeEqualityOperator() throws CloneNotSupportedException {
+
+        object1 = new ObjectCopy("x", new String[]{"X", "Y", "Z"});
+        ObjectCopy object2= (ObjectCopy) object1.clone();
+
+        assertTrue(object1.anArray==object2.anArray);
+        object2.anArray[1]="Q";
+        assertTrue(object1.anArray==object2.anArray);
     }
 
 }
