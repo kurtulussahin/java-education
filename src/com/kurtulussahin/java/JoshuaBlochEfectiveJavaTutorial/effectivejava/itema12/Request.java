@@ -21,10 +21,10 @@ public class Request {
 	
 	
 	
-//	@Override
-//	public String toString() {
-//		return "Request [header=" + header + ", body=" + body + "]";
-//	}
+	@Override
+	public String toString() {
+		return "Request [header=" + header + ", body=" + body + "]";
+	}
 	
 //	public String toString() {
 //		return new com.google.gson.Gson().toJson(this);
