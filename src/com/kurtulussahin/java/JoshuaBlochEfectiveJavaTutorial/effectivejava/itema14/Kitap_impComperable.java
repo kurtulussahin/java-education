@@ -1,11 +1,11 @@
 package com.kurtulussahin.java.JoshuaBlochEfectiveJavaTutorial.effectivejava.itema14;
 
-public class Kitap implements Comparable<Kitap>{
+public class Kitap_impComperable implements Comparable<Kitap_impComperable>{
 
 	private String isim;
 	private int sayfa;
 	
-	public Kitap(String isim, int sayfa) {
+	public Kitap_impComperable(String isim, int sayfa) {
 		// TODO Auto-generated constructor stub
 		this.isim = isim;
 		this.sayfa = sayfa;
@@ -28,8 +28,11 @@ public class Kitap implements Comparable<Kitap>{
 	}
 	
 	@Override
-	public int compareTo(Kitap o) {
-		// TODO Auto-generated method stub
+	public int compareTo(Kitap_impComperable o) {
+		//Compares this object with the specified object for order.
+		//Returns a negative integer, zero, or a positive integer
+		// as this object is less than, equal to, or greater than the specified object.
+
 		return this.sayfa - o.sayfa;
 	}
 
