@@ -6,6 +6,9 @@ abstract class AnaSınıf {
 		overrideMe();
 	}
 
+
+
+	//private veya Final olmalı
 	abstract void overrideMe(); 
 	
 
