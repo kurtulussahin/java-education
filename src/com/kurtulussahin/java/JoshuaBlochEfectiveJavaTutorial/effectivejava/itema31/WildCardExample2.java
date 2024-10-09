@@ -3,7 +3,7 @@ package com.kurtulussahin.java.JoshuaBlochEfectiveJavaTutorial.effectivejava.ite
 import java.util.ArrayList;
 import java.util.List;
 
-public class TestDrive2 {
+public class WildCardExample2 {
 	
 	public static void main(String[] args) {
 		
@@ -16,7 +16,8 @@ public class TestDrive2 {
 		// You can read a Number because any of the lists that could be assigned to foo3 contain a Number or a subclass of Number.
 		// You can't read an Integer because foo3 could be pointing at a List<Double>.
 		// You can't read a Double because foo3 could be pointing at a List<Integer>.
-		
+
+
 		
 		// Writing
 		// You can't add an Integer because foo3 could be pointing at a List<Double>.
