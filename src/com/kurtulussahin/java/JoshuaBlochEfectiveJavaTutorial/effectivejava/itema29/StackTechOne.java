@@ -40,17 +40,6 @@ public class StackTechOne<E> {
 			elements = Arrays.copyOf(elements, 2 * size + 1);
 	}
 
-	// Little program to exercise our generic Stack
-	public static void main(String[] args) {
-		
-		StackTechOne<String> stack = new StackTechOne<>();
-		
-		for (String arg : args)
-			stack.push(arg);
-		
-		while (!stack.isEmpty())
-			System.out.println(stack.pop().toUpperCase());
-		
-	}
+
 	
 }
