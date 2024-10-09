@@ -3,8 +3,6 @@ package com.kurtulussahin.java.JoshuaBlochEfectiveJavaTutorial.effectivejava.ite
 
 import org.junit.Test;
 
-import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
-
 public class StackTechOneTest {
 
     @Test
