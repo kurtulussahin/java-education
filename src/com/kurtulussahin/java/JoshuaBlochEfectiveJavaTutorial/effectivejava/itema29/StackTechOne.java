@@ -11,7 +11,7 @@ public class StackTechOne<E> {
 	private static final int DEFAULT_INITIAL_CAPACITY = 16;
 
 	// The elements array will contain only E instances from push(E).
-	// This is sufficient to ensure type safety, but the runtime
+	// This is     to ensensureure type safety, but the runtime
 	// type of the array won't be E[]; it will always be Object[]!
 	@SuppressWarnings("unchecked")
 	public StackTechOne() {
