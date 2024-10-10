@@ -1,19 +1,20 @@
 package com.kurtulussahin.java.JoshuaBlochEfectiveJavaTutorial.effectivejava.item1;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.*;
 
-class YemekTest {
+
+public class YemekTest {
 
     @Test
-    void sogukYemekCreatesDondurmaInstance() {
-        assertInstanceOf(Dondurma.class, Yemek.sogukYemek());
+    public void sogukYemekCreatesDondurmaInstance() {
+        assertEquals(Dondurma.class, Yemek.sogukYemek().getClass());
 
     }
 
     @Test
-    void sicakYemekCreatesPideInstance() {
-        assertInstanceOf(Pide.class, Yemek.sicakYemek());
+    public void sicakYemekCreatesPideInstance() {
+        assertEquals(Pide.class, Yemek.sicakYemek().getClass());
     }
 }
