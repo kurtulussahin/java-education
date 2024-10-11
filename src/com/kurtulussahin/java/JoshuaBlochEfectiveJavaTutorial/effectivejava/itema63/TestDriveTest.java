@@ -1,13 +1,14 @@
 package com.kurtulussahin.java.JoshuaBlochEfectiveJavaTutorial.effectivejava.itema63;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.assertTrue;
 
-class TestDriveTest {
+
+public class TestDriveTest {
 
     @Test
-    void testPerformance() {
+    public void testPerformance() {
         long start;
         long finish;
 

@@ -8,6 +8,6 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/hibernate"/>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
-	<classpathentry kind="lib" path="/lib/approvaltests-24.7.0.jar"/>
+	<classpathentry kind="lib" path="/home/acer/Downloads/approvaltests-24.5.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

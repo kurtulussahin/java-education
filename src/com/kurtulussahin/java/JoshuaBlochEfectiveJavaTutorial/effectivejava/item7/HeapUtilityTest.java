@@ -12,7 +12,7 @@ class HeapUtilityTest {
     }
 
     //Run if you have time
-    @Test
+    //@Test
     void heapLoader() {
         HeapUtility.heapLoader(1000000);
     }

@@ -36,7 +36,8 @@ public class equalityOfBoxedIntegersTest {
 
     }
 
-    @Test
+    //slow test
+    //@Test
     public void shouldPrimitivesFaster() {
         long startTime;
         long endTime;

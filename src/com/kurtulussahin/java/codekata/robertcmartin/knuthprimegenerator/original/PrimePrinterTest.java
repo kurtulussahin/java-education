@@ -19,20 +19,20 @@ public class PrimePrinterTest {
   @Before
   public void setup() throws Exception {
     out = System.out;
-    System.setOut(new PrintStream(new FileOutputStream("src/com/kurtulussahin/java/robertcmartin/knuthprimegenerator/lead")));
+    System.setOut(new PrintStream(new FileOutputStream("src/com/kurtulussahin/java/codekata/robertcmartin/knuthprimegenerator/lead")));
   }
 
   @After
   public void teardown() {
     System.setOut(out);
-    new File("src/com/kurtulussahin/java/robertcmartin/knuthprimegenerator/lead").delete();
+    new File("src/com/kurtulussahin/java/codekata/robertcmartin/knuthprimegenerator/lead").delete();
   }
 
   @Test
   public void makeSureOutputMatchesGold() throws Exception {
     PrimePrinter.main(new String[0]);
-    BufferedReader lead = new BufferedReader(new FileReader("src/com/kurtulussahin/java/robertcmartin/knuthprimegenerator/lead"));
-    BufferedReader gold = new BufferedReader(new FileReader("src/com/kurtulussahin/java/robertcmartin/knuthprimegenerator/gold"));
+    BufferedReader lead = new BufferedReader(new FileReader("src/com/kurtulussahin/java/codekata/robertcmartin/knuthprimegenerator/lead"));
+    BufferedReader gold = new BufferedReader(new FileReader("src/com/kurtulussahin/java/codekata/robertcmartin/knuthprimegenerator/gold"));
     String line;
     while ((line = gold.readLine()) != null) {
       assertEquals(line, lead.readLine());
