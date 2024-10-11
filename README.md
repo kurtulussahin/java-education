@@ -24,7 +24,7 @@
 
 [Clean Code Fundamentals](https://www.oreilly.com/library/view/clean-code-fundamentals/9780134661742/) - 53 hours
 
-## BOOKS
+## Books
 
 Head First Java
 
@@ -43,3 +43,6 @@ The Clean Coder: A Code of Conduct for Professional Programmers - Robert C. Mart
 
 Clean Architecture: A Craftsman's Guide to Software Structure and Design - Robert C. Martin
 
+## Data Structures & Algorithms Problems
+
+[LeetCode profile page](https://leetcode.com/u/kurtulussahin/)
