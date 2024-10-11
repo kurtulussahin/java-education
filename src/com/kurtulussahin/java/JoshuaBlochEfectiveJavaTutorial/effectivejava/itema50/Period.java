@@ -21,6 +21,12 @@ public final class Period {
 //		this.start = start;
 //		this.end = end;
 //	}
+//	public Period(Date start, Date end) {
+//		if (start.compareTo(end) > 0)
+//			throw new IllegalArgumentException(start + " after " + end);
+//		this.start = start;
+//		this.end = end;
+//	}
 //
 //	public Date start() {
 //		return start;
@@ -30,9 +36,17 @@ public final class Period {
 //		return end;
 //	}
 //
+//	public Date start() {
+//		return start;
+//	}
+//
+//	public Date end() {
+//		return end;
+//	}
+
 	@Override
 	public String toString() {
-		return start + " - " + end + "-" + aklıma;
+		return start + " - " + end; // + "-" + aklıma;
 	}
 
 	// Repaired constructor - makes defensive copies of parameters (Page 232)
