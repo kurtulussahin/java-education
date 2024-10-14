@@ -26,7 +26,7 @@ public class RunTests {
 //				}
 //			}
 
-			if (m.isAnnotationPresent(ExceptionTest.class)) 
+			if (m.isAnnotationPresent(ExceptionTest.class))
 			{
 				tests++;
 				try 

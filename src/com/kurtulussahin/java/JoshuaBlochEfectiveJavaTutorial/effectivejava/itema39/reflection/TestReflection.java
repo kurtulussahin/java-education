@@ -22,19 +22,21 @@ public class TestReflection {
 		{
 			// Joker tipleri wild- unchecked
 			Class<?> sınıf = Class.forName("com.kurtulussahin.java.JoshuaBlochEfectiveJavaTutorial.effectivejava.itema39.reflection.Metallica");
+			//Object obj = cons.newInstance();
 			Object obj = sınıf.newInstance();
-			//Object obj2 = sınıf.getDeclaredConstructor().newInstance();
-			// Varargs..
 			Constructor<?> cons = sınıf.getDeclaredConstructor(String.class, Integer.TYPE);
-			
+
+
+
 			for (Field field : sınıf.getDeclaredFields()) 
 			{
+
+
 				System.out.println("Field:" + field.getName());
 			}
 			System.out.println("Part1 Bitti");
 			System.out.println();
 
-			
 			System.out.println("Modifiers:" + cons.getModifiers());
 			int modifier = cons.getModifiers();
 			System.out.println("Modifer: " + Modifier.toString(modifier));

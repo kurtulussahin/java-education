@@ -26,6 +26,7 @@ class Plant {
 		return name;
 	}
 
+
 	public static void main(String[] args) {
 		
 		Plant[] garden = { new Plant("Basil", LifeCycle.ANNUAL), new Plant("Carroway", LifeCycle.BIENNIAL),
@@ -38,7 +39,8 @@ class Plant {
 		// indis sorumluluğu senin üstünde
 		
 		Set<Plant>[] plantsByLifeCycleArr = (Set<Plant>[]) new Set[LifeCycle.values().length];
-		
+
+
 		for (int i = 0; i < plantsByLifeCycleArr.length; i++)
 			plantsByLifeCycleArr[i] = new HashSet<>();
 		for (Plant p : garden)
