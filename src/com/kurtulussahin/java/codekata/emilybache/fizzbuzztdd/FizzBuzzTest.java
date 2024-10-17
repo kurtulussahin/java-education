@@ -2,6 +2,10 @@ package com.kurtulussahin.java.codekata.emilybache.fizzbuzztdd;
 
 import org.junit.jupiter.api.Test;
 
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
+import java.io.UnsupportedEncodingException;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /*
@@ -45,5 +49,17 @@ public class FizzBuzzTest {
 
         assertEquals("FizzBuzz", new FizzBuzz().convert(15));
         assertEquals("FizzBuzz", new FizzBuzz().convert(30));
+    }
+
+    @Test
+    void printAllTheNumbersTo100() throws UnsupportedEncodingException {
+        var storage = new ByteArrayOutputStream();
+        var out = new PrintStream(storage);
+        new FizzBuzz().print(out);
+        var result = storage.toString("utf-8");
+        assertEquals("1\n", result.substring(0,2));
+        assertEquals(100, result.split("\n").length);
+        assertEquals("Buzz\n", result.substring(result.length()-5));
+
     }
 }
