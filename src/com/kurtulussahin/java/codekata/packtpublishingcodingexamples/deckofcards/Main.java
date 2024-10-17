@@ -1,11 +1,11 @@
-package com.kurtulussahin.java.problems.packtpublishingcodingexamples.deckofcards;
+package com.kurtulussahin.java.codekata.packtpublishingcodingexamples.deckofcards;
  
-import com.kurtulussahin.java.problems.packtpublishingcodingexamples.deckofcards.card.Card;
-import com.kurtulussahin.java.problems.packtpublishingcodingexamples.deckofcards.card.Pack;
-import com.kurtulussahin.java.problems.packtpublishingcodingexamples.deckofcards.card.StandardCard;
-import com.kurtulussahin.java.problems.packtpublishingcodingexamples.deckofcards.card.StandardPack;
-import com.kurtulussahin.java.problems.packtpublishingcodingexamples.deckofcards.card.StandardSuit;
-import com.kurtulussahin.java.problems.packtpublishingcodingexamples.deckofcards.deck.Deck;
+import com.kurtulussahin.java.codekata.packtpublishingcodingexamples.deckofcards.card.Card;
+import com.kurtulussahin.java.codekata.packtpublishingcodingexamples.deckofcards.card.Pack;
+import com.kurtulussahin.java.codekata.packtpublishingcodingexamples.deckofcards.card.StandardCard;
+import com.kurtulussahin.java.codekata.packtpublishingcodingexamples.deckofcards.card.StandardPack;
+import com.kurtulussahin.java.codekata.packtpublishingcodingexamples.deckofcards.card.StandardSuit;
+import com.kurtulussahin.java.codekata.packtpublishingcodingexamples.deckofcards.deck.Deck;
 
 public class Main {
 

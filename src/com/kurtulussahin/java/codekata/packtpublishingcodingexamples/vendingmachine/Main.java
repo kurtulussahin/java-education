@@ -1,6 +1,6 @@
-package com.kurtulussahin.java.problems.packtpublishingcodingexamples.vendingmachine;
+package com.kurtulussahin.java.codekata.packtpublishingcodingexamples.vendingmachine;
 
-import com.kurtulussahin.java.problems.packtpublishingcodingexamples.vendingmachine.vending.machine.VendingMachine;
+import com.kurtulussahin.java.codekata.packtpublishingcodingexamples.vendingmachine.vending.machine.VendingMachine;
 
 public class Main {
  

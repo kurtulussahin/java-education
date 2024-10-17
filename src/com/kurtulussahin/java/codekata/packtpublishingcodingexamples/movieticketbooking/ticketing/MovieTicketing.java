@@ -1,7 +1,7 @@
-package com.kurtulussahin.java.problems.packtpublishingcodingexamples.movieticketbooking.ticketing;
+package com.kurtulussahin.java.codekata.packtpublishingcodingexamples.movieticketbooking.ticketing;
 
-import com.kurtulussahin.java.problems.packtpublishingcodingexamples.movieticketbooking.cinema.Movie;
-import com.kurtulussahin.java.problems.packtpublishingcodingexamples.movieticketbooking.cinema.MovieTicket;
+import com.kurtulussahin.java.codekata.packtpublishingcodingexamples.movieticketbooking.cinema.Movie;
+import com.kurtulussahin.java.codekata.packtpublishingcodingexamples.movieticketbooking.cinema.MovieTicket;
  
 public interface MovieTicketing {
     

@@ -1,4 +1,4 @@
-package com.kurtulussahin.java.problems.packtpublishingcodingexamples.movieticketbooking;
+package com.kurtulussahin.java.codekata.packtpublishingcodingexamples.movieticketbooking;
  
 public class Main {
 

@@ -1,6 +1,6 @@
-package com.kurtulussahin.java.problems.packtpublishingcodingexamples.jukebox.user;
+package com.kurtulussahin.java.codekata.packtpublishingcodingexamples.jukebox.user;
  
-import com.kurtulussahin.java.problems.packtpublishingcodingexamples.jukebox.jukebox.Jukebox;
+import com.kurtulussahin.java.codekata.packtpublishingcodingexamples.jukebox.jukebox.Jukebox;
 
 public class User {
     private final Jukebox jukebox;

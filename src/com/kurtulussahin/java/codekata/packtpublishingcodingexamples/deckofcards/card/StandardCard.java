@@ -1,4 +1,4 @@
-package com.kurtulussahin.java.problems.packtpublishingcodingexamples.deckofcards.card;
+package com.kurtulussahin.java.codekata.packtpublishingcodingexamples.deckofcards.card;
  
 public class StandardCard extends Card {
 

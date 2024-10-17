@@ -24,7 +24,7 @@ public class SingleThreadExecutorExample {
         public void run() {
         	
             System.out.println("Starting printer work: " + id);
-            for (int i = 0; i <= 100; i += speed) {
+            for (int i = 0; i <= 10; i += speed) {
                 try {
                     MILLISECONDS.sleep(300);
                 } catch (InterruptedException e) {

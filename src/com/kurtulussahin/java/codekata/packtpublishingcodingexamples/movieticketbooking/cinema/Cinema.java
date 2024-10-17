@@ -1,11 +1,11 @@
-package com.kurtulussahin.java.problems.packtpublishingcodingexamples.movieticketbooking.cinema;
+package com.kurtulussahin.java.codekata.packtpublishingcodingexamples.movieticketbooking.cinema;
  
 import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-import com.kurtulussahin.java.problems.packtpublishingcodingexamples.movieticketbooking.cinema.CinemaRoom.Cartridge;
+import com.kurtulussahin.java.codekata.packtpublishingcodingexamples.movieticketbooking.cinema.CinemaRoom.Cartridge;
 
 public class Cinema {
 

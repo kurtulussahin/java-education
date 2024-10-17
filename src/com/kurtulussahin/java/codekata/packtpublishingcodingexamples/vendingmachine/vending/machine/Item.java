@@ -1,4 +1,4 @@
-package com.kurtulussahin.java.problems.packtpublishingcodingexamples.vendingmachine.vending.machine;
+package com.kurtulussahin.java.codekata.packtpublishingcodingexamples.vendingmachine.vending.machine;
 
 public enum Item {
  

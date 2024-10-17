@@ -1,14 +1,14 @@
-package com.kurtulussahin.java.problems.packtpublishingcodingexamples.jukebox;
+package com.kurtulussahin.java.codekata.packtpublishingcodingexamples.jukebox;
  
 import java.util.List;
 import java.util.Set;
 
-import com.kurtulussahin.java.problems.packtpublishingcodingexamples.jukebox.jukebox.CD;
-import com.kurtulussahin.java.problems.packtpublishingcodingexamples.jukebox.jukebox.CDPlayer;
-import com.kurtulussahin.java.problems.packtpublishingcodingexamples.jukebox.jukebox.Jukebox;
-import com.kurtulussahin.java.problems.packtpublishingcodingexamples.jukebox.jukebox.Playlist;
-import com.kurtulussahin.java.problems.packtpublishingcodingexamples.jukebox.jukebox.Song;
-import com.kurtulussahin.java.problems.packtpublishingcodingexamples.jukebox.user.User;
+import com.kurtulussahin.java.codekata.packtpublishingcodingexamples.jukebox.jukebox.CD;
+import com.kurtulussahin.java.codekata.packtpublishingcodingexamples.jukebox.jukebox.CDPlayer;
+import com.kurtulussahin.java.codekata.packtpublishingcodingexamples.jukebox.jukebox.Jukebox;
+import com.kurtulussahin.java.codekata.packtpublishingcodingexamples.jukebox.jukebox.Playlist;
+import com.kurtulussahin.java.codekata.packtpublishingcodingexamples.jukebox.jukebox.Song;
+import com.kurtulussahin.java.codekata.packtpublishingcodingexamples.jukebox.user.User;
 
 public class Main {
 

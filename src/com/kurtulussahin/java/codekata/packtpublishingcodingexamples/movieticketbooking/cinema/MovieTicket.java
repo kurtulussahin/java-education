@@ -1,4 +1,4 @@
-package com.kurtulussahin.java.problems.packtpublishingcodingexamples.movieticketbooking.cinema;
+package com.kurtulussahin.java.codekata.packtpublishingcodingexamples.movieticketbooking.cinema;
 
 import java.time.LocalTime;
 import java.util.List;

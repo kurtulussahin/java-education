@@ -1,4 +1,4 @@
-package com.kurtulussahin.java.problems.packtpublishingcodingexamples.jukebox.jukebox;
+package com.kurtulussahin.java.codekata.packtpublishingcodingexamples.jukebox.jukebox;
  
 import java.util.List;
 

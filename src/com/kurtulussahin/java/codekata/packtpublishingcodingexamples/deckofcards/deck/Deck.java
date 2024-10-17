@@ -1,11 +1,11 @@
-package com.kurtulussahin.java.problems.packtpublishingcodingexamples.deckofcards.deck;
+package com.kurtulussahin.java.codekata.packtpublishingcodingexamples.deckofcards.deck;
 
 import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 
-import com.kurtulussahin.java.problems.packtpublishingcodingexamples.deckofcards.card.Card;
-import com.kurtulussahin.java.problems.packtpublishingcodingexamples.deckofcards.card.Pack;
+import com.kurtulussahin.java.codekata.packtpublishingcodingexamples.deckofcards.card.Card;
+import com.kurtulussahin.java.codekata.packtpublishingcodingexamples.deckofcards.card.Pack;
  
 public class Deck<T extends Card> implements Iterable<T> {
 
