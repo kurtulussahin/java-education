@@ -39,4 +39,11 @@ public class FizzBuzzTest {
         assertEquals("Buzz", new FizzBuzz().convert(5));
         assertEquals("Buzz", new FizzBuzz().convert(10));
     }
+
+    @Test
+    void fizzBuzzNumbersAreMultiplesOfThreeAndFive(){
+
+        assertEquals("FizzBuzz", new FizzBuzz().convert(15));
+        assertEquals("FizzBuzz", new FizzBuzz().convert(30));
+    }
 }
