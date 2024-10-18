@@ -1,6 +1,5 @@
-package com.kurtulussahin.java.codekata.neetcodeDynamicArray;
+package com.kurtulussahin.java.codekata.dataStructureImplementations.neetcodeDynamicArray;
 
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

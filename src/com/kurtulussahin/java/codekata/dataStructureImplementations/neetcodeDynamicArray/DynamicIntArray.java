@@ -1,4 +1,4 @@
-package com.kurtulussahin.java.codekata.neetcodeDynamicArray;
+package com.kurtulussahin.java.codekata.dataStructureImplementations.neetcodeDynamicArray;
 
 public class DynamicIntArray {
 
