@@ -12,4 +12,13 @@ public class DoublyLinkedList {
         head.next=tail;
         tail.prev=head;
     }
+
+    public void insertFront(int val) {
+        DoublyLinkedListNode newNode =  new DoublyLinkedListNode(val);
+        newNode.prev=head;
+        newNode.next=head.next;
+
+        head.next.prev = newNode;
+        head.next=newNode;
+    }
 }

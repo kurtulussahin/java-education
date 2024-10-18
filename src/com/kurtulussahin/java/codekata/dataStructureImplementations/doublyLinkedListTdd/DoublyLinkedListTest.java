@@ -15,7 +15,7 @@ public class DoublyLinkedListTest {
         DoublyLinkedListNode node = new DoublyLinkedListNode(10);
         assertNull(node.next);
         assertNull(node.prev);
-        assertEquals(node.val,10);
+        assertEquals(10,node.val);
     }
 
     @Test
@@ -24,5 +24,13 @@ public class DoublyLinkedListTest {
         DoublyLinkedList dLList = new DoublyLinkedList();
         assertEquals(dLList.head.next,dLList.tail);
         assertEquals(dLList.tail.prev,dLList.head);
+    }
+
+    @Test
+    void insertFront(){
+
+        DoublyLinkedList dLList = new DoublyLinkedList();
+        dLList.insertFront(20);
+        assertEquals(20,dLList.head.next.val);
     }
 }
