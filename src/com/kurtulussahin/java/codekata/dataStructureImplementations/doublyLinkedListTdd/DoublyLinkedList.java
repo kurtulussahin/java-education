@@ -63,4 +63,18 @@ public class DoublyLinkedList {
         }
         return curr;
     }
+
+    public void insertAtIndex(int index, int val) {
+        if(index==0){
+            insertFront(val);
+        }
+
+        DoublyLinkedListNode newNode =  new DoublyLinkedListNode(val);
+        DoublyLinkedListNode curr=getAtIndex(index);
+        curr.prev.next=newNode;
+        newNode.prev=curr.prev;
+
+        newNode.next = curr;
+        curr.prev=newNode;
+    }
 }

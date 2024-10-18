@@ -51,6 +51,20 @@ public class DoublyLinkedListTest {
     }
 
     @Test
+    void setAtIndex(){
+
+        DoublyLinkedList dLList = new DoublyLinkedList();
+        dLList.insertFront(20);
+        dLList.insertFront(50);
+        dLList.insertFront(100);
+        dLList.insertFront(200);
+
+        assertEquals(50,dLList.getAtIndex(2).val);
+        dLList.insertAtIndex(2,1000);
+        assertEquals(1000,dLList.getAtIndex(2).val);
+    }
+
+    @Test
     void insertEnd(){
 
         DoublyLinkedList dLList = new DoublyLinkedList();
