@@ -1,6 +1,8 @@
 package com.kurtulussahin.java.codekata.dataStructureImplementations.doublyLinkedListTdd;
 
 
+import java.io.PrintStream;
+
 public class DoublyLinkedList {
     DoublyLinkedListNode tail;
     DoublyLinkedListNode head;
@@ -39,5 +41,14 @@ public class DoublyLinkedList {
     public void removeEnd() {
         tail.prev.prev.next=tail;
         tail.prev=tail.prev.prev;
+    }
+
+    public void print(PrintStream out) {
+        DoublyLinkedListNode curr = head.next;
+        while (curr != tail) {
+            out.print(curr.val + " -> ");
+            curr = curr.next;
+        }
+        //out.println();
     }
 }

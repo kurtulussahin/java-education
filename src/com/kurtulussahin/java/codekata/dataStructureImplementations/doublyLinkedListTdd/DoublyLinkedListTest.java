@@ -1,7 +1,12 @@
 package com.kurtulussahin.java.codekata.dataStructureImplementations.doublyLinkedListTdd;
 
+import com.kurtulussahin.java.codekata.emilybache.fizzbuzztdd.FizzBuzz;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
+import java.io.UnsupportedEncodingException;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNull;
@@ -67,6 +72,21 @@ public class DoublyLinkedListTest {
         assertEquals(20,dLList.tail.prev.val);
         dLList.removeEnd();
         assertEquals(50,dLList.tail.prev.val);
+
+    }
+
+    @Test
+    void print() throws UnsupportedEncodingException {
+        DoublyLinkedList dLList = new DoublyLinkedList();
+        dLList.insertFront(20);
+        dLList.insertFront(50);
+        dLList.insertFront(100);
+
+        var storage = new ByteArrayOutputStream();
+        var out = new PrintStream(storage);
+        dLList.print(out);
+        var result = storage.toString("utf-8");
+        assertEquals("100 -> 50 -> 20 -> ", result.substring(0));
 
     }
 
