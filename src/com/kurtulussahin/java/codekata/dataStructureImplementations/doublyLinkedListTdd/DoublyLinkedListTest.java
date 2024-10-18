@@ -17,4 +17,12 @@ public class DoublyLinkedListTest {
         assertNull(node.prev);
         assertEquals(node.val,10);
     }
+
+    @Test
+    void createDoublyLinkedList(){
+
+        DoublyLinkedList dLList = new DoublyLinkedList();
+        assertEquals(dLList.head.next,dLList.tail);
+        assertEquals(dLList.tail.prev,dLList.head);
+    }
 }
