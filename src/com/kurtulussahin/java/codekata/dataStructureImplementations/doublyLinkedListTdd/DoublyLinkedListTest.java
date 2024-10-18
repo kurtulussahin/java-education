@@ -1,6 +1,5 @@
 package com.kurtulussahin.java.codekata.dataStructureImplementations.doublyLinkedListTdd;
 
-import com.kurtulussahin.java.codekata.emilybache.fizzbuzztdd.FizzBuzz;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -37,6 +36,18 @@ public class DoublyLinkedListTest {
         DoublyLinkedList dLList = new DoublyLinkedList();
         dLList.insertFront(20);
         assertEquals(20,dLList.head.next.val);
+    }
+
+    @Test
+    void getIndex(){
+
+        DoublyLinkedList dLList = new DoublyLinkedList();
+        dLList.insertFront(20);
+        dLList.insertFront(50);
+        dLList.insertFront(100);
+        dLList.insertFront(200);
+
+        assertEquals(50,dLList.getAtIndex(2).val);
     }
 
     @Test

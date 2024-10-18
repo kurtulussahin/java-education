@@ -49,6 +49,18 @@ public class DoublyLinkedList {
             out.print(curr.val + " -> ");
             curr = curr.next;
         }
-        //out.println();
+    }
+
+    public DoublyLinkedListNode getAtIndex(int index) {
+        DoublyLinkedListNode curr = head.next;
+        if(index==0){
+            return curr;
+        }
+        int i=1;
+        while (i<=index) {
+            curr = curr.next;
+            i++;
+        }
+        return curr;
     }
 }
