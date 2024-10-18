@@ -21,4 +21,13 @@ public class DoublyLinkedList {
         head.next.prev = newNode;
         head.next=newNode;
     }
+
+    public void insertEnd(int val) {
+        DoublyLinkedListNode newNode =  new DoublyLinkedListNode(val);
+        newNode.next=tail;
+        newNode.prev=tail.prev;
+
+        tail.prev.next = newNode;
+        tail.prev=newNode;
+    }
 }

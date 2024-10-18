@@ -33,4 +33,12 @@ public class DoublyLinkedListTest {
         dLList.insertFront(20);
         assertEquals(20,dLList.head.next.val);
     }
+
+    @Test
+    void insertEnd(){
+
+        DoublyLinkedList dLList = new DoublyLinkedList();
+        dLList.insertEnd(20);
+        assertEquals(20,dLList.tail.prev.val);
+    }
 }
