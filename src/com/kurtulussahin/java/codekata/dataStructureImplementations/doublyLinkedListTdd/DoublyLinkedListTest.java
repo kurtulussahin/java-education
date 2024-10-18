@@ -41,4 +41,33 @@ public class DoublyLinkedListTest {
         dLList.insertEnd(20);
         assertEquals(20,dLList.tail.prev.val);
     }
+
+    @Test
+    void removeFront(){
+
+        DoublyLinkedList dLList = new DoublyLinkedList();
+        dLList.insertFront(20);
+        dLList.insertFront(50);
+        dLList.insertFront(100);
+
+        assertEquals(100,dLList.head.next.val);
+        dLList.removeFront();
+        assertEquals(50,dLList.head.next.val);
+
+    }
+
+    @Test
+    void removeEnd(){
+
+        DoublyLinkedList dLList = new DoublyLinkedList();
+        dLList.insertFront(20);
+        dLList.insertFront(50);
+        dLList.insertFront(100);
+
+        assertEquals(20,dLList.tail.prev.val);
+        dLList.removeEnd();
+        assertEquals(50,dLList.tail.prev.val);
+
+    }
+
 }

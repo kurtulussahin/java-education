@@ -30,4 +30,14 @@ public class DoublyLinkedList {
         tail.prev.next = newNode;
         tail.prev=newNode;
     }
+
+    public void removeFront() {
+        head.next.next.prev=head;
+        head.next=head.next.next;
+    }
+
+    public void removeEnd() {
+        tail.prev.prev.next=tail;
+        tail.prev=tail.prev.prev;
+    }
 }
