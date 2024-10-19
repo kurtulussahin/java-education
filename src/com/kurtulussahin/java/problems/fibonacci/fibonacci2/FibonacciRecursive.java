@@ -1,4 +1,4 @@
-package com.kurtulussahin.java.problems.fibonaccirecursive;
+package com.kurtulussahin.java.problems.fibonacci.fibonacci2;
 
 public class FibonacciRecursive {
 
