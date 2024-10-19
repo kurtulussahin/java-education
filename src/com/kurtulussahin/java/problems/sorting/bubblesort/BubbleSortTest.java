@@ -1,4 +1,4 @@
-package com.kurtulussahin.java.problems.bubblesort;
+package com.kurtulussahin.java.problems.sorting.bubblesort;
 
 public class BubbleSortTest {
 	public static void main(String[] args) {

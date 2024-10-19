@@ -1,4 +1,4 @@
-package com.kurtulussahin.java.problems.bubblesort;
+package com.kurtulussahin.java.problems.sorting.bubblesort;
 
 public class BubbleSort {
 	public static int[] sortNumsAscending(int[] nums) {
