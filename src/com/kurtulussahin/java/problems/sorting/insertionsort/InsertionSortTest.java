@@ -15,9 +15,16 @@ public class InsertionSortTest {
     }
 
     @Test
-    void sortTwoMemberaArray(){
+    void sortTwoMembersArray(){
         int[] unsorted = {2,1};
         int[] sorted = InsertionSort.insertionSort(unsorted);
         assertArrayEquals(new int[]{1,2}, sorted);
+    }
+
+    @Test
+    void sortThreeMembersArray(){
+        int[] unsorted = {2,3,1};
+        int[] sorted = InsertionSort.insertionSort(unsorted);
+        assertArrayEquals(new int[]{1,2,3}, sorted);
     }
 }
