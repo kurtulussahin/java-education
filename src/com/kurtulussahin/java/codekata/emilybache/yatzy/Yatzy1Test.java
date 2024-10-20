@@ -25,10 +25,10 @@ public class Yatzy1Test {
     }
 
     @Test public void test_1s() {
-        assertTrue(Yatzy1.ones(1,2,3,4,5) == 1);
-        assertEquals(2, Yatzy1.ones(1,2,1,4,5));
-        assertEquals(0, Yatzy1.ones(6,2,2,4,5));
-        assertEquals(4, Yatzy1.ones(1,2,1,1,1));
+        assertTrue(new Yatzy1(1, 2, 3, 4, 5).ones() == 1);
+        assertEquals(2, new Yatzy1(1, 2, 1, 4, 5).ones());
+        assertEquals(0, new Yatzy1(6, 2, 2, 4, 5).ones());
+        assertEquals(4, new Yatzy1(1, 2, 1, 1, 1).ones());
     }
 
     @Test
