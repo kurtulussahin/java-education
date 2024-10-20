@@ -1,6 +1,5 @@
 package com.kurtulussahin.java.codekata.emilybache.yatzy;
 
-import com.kurtulussahin.java.codekata.emilybache.yatzy.Yatzy1;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -12,9 +11,9 @@ public class Yatzy1Test {
     @Test
     public void chance_scores_sum_of_all_dice() {
         int expected = 15;
-        int actual = Yatzy1.chance(2,3,4,5,1);
+        int actual = new Yatzy1(2, 3, 4, 5, 1).chance();
         assertEquals(expected, actual);
-        assertEquals(16, Yatzy1.chance(3,3,4,5,1));
+        assertEquals(16, new Yatzy1(3, 3, 4, 5, 1).chance());
     }
 
     @Test public void yatzy_scores_50() {
