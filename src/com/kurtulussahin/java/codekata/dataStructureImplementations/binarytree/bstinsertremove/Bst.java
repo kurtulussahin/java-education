@@ -53,7 +53,6 @@ public class Bst {
                 root.right = remove(root.right, minNode.val);
             }
         }
-
         return root;
     }
 }
