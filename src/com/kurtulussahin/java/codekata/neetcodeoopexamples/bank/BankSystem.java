@@ -1,0 +1,24 @@
+package com.kurtulussahin.java.codekata.neetcodeoopexamples.bank;
+
+import java.util.ArrayList;
+
+public class BankSystem {
+    private ArrayList<BankAccount> bankAccounts;
+    private ArrayList<Transaction> transactions;
+
+    public BankSystem(ArrayList<BankAccount> bankAccounts, ArrayList<Transaction> transactions) {
+        this.bankAccounts = bankAccounts;
+        this.transactions = transactions;
+    }
+
+    public int openAccount(String CustomerName) {
+        int customerId= bankAccounts.size();
+        BankAccount account = new BankAccount (customerId, "John Doe", 0);
+        bankAccounts.add(account);
+
+        Transaction transaction = new OpenAccount(customerId );
+        transactions.add(transaction);
+
+        return customerId;
+    }
+}

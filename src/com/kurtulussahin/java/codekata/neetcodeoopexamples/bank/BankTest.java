@@ -2,24 +2,27 @@ package com.kurtulussahin.java.codekata.neetcodeoopexamples.bank;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class BankTest {
 
     @Test
     void createBankAccount(){
-        BankAccount account = new BankAccount (1, "Kurtuluş Şahin", 999);
+        BankAccount account = new BankAccount (1, "John Doe", 999);
     }
 
     @Test
     void getBalance(){
-        BankAccount account = new BankAccount (1, "Kurtuluş Şahin", 999);
+        BankAccount account = new BankAccount (1, "John Doe", 999);
         assertEquals(999,account.getBalance() );
+
     }
 
     @Test
     void deposit(){
-        BankAccount account = new BankAccount (1, "Kurtuluş Şahin", 0);
+        BankAccount account = new BankAccount (1, "John Doe", 0);
         account.deposit(100);
         account.deposit(100);
         account.deposit(100);
@@ -28,7 +31,7 @@ public class BankTest {
 
     @Test
     void withdraw(){
-        BankAccount account = new BankAccount (1, "Kurtuluş Şahin", 999);
+        BankAccount account = new BankAccount (1, "John Doe", 999);
         account.withdraw(100);
         account.withdraw(100);
         account.withdraw(100);
@@ -60,6 +63,20 @@ public class BankTest {
         Transaction transaction = new OpenAccount(customerId );
 
     }
+
+    @Test
+    void createBankSystem(){
+        BankSystem bankSystem = new BankSystem(new ArrayList<BankAccount>(), new ArrayList<Transaction>());
+
+    }
+
+    @Test
+    void openAccount(){
+        BankSystem bankSystem = new BankSystem(new ArrayList<BankAccount>(), new ArrayList<Transaction>());
+
+        int customerId = bankSystem.openAccount("John Doe");
+    }
+
 
 
 
