@@ -1,7 +1,6 @@
 package com.kurtulussahin.java.codekata.neetcodeoopexamples.bank;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 
 public class BankSystem {

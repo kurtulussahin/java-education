@@ -149,7 +149,6 @@ public class BankTest {
         bankSystem.openAccount("John Doe 3");
 
         assertEquals(3,bankSystem.getAccounts().size());
-
     }
 
 }
