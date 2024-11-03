@@ -1,6 +1,7 @@
 package com.kurtulussahin.java.codekata.neetcodeoopexamples.bank;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 public class BankSystem {
@@ -26,6 +27,9 @@ public class BankSystem {
     public void deposit(int customerId, int amount) {
         BankAccount account = bankAccounts.get(customerId);
         account.deposit(amount);
+
+        Transaction transaction = new Deposit(customerId, amount);
+        transactions.add(transaction);
     }
 
     public void withdraw(int customerId, int amount) {
@@ -34,6 +38,9 @@ public class BankSystem {
         }
         BankAccount account = bankAccounts.get(customerId);
         account.withdraw(amount);
+
+        Transaction transaction = new Withdraw(customerId, amount);
+        transactions.add(transaction);
     }
 
     public BankAccount getAccount(int customerId) {
@@ -43,5 +50,9 @@ public class BankSystem {
     public List<BankAccount> getAccounts() {
 
         return bankAccounts;
+    }
+
+    public List<Transaction> getTransactions() {
+        return transactions;
     }
 }

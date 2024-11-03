@@ -121,6 +121,26 @@ public class BankTest {
     }
 
     @Test
+    void bankSystemGetTransactions(){
+        BankSystem bankSystem = new BankSystem(new ArrayList<BankAccount>(), new ArrayList<Transaction>());
+
+        int customerId1 = bankSystem.openAccount("John Doe");
+        int customerId2 = bankSystem.openAccount("John Doe 2");
+        int customerId3 = bankSystem.openAccount("John Doe 3");
+
+        bankSystem.deposit(customerId1, 999);
+        bankSystem.deposit(customerId2, 999);
+        bankSystem.deposit(customerId3, 999);
+
+        bankSystem.withdraw(customerId1, 100);
+        bankSystem.withdraw(customerId2, 100);
+        bankSystem.withdraw(customerId3, 100);
+
+        assertEquals(9,bankSystem.getTransactions().size());
+
+    }
+
+    @Test
     void bankSystemGetAccounts(){
         BankSystem bankSystem = new BankSystem(new ArrayList<BankAccount>(), new ArrayList<Transaction>());
 
