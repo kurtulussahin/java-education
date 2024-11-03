@@ -17,6 +17,15 @@ public class BankTest {
         assertEquals(999,account.getBalance() );
     }
 
+    @Test
+    void deposit(){
+        BankAccount account = new BankAccount (1, "Kurtuluş Şahin", 0);
+        account.deposit(100);
+        account.deposit(100);
+        account.deposit(100);
+        assertEquals(300,account.getBalance() );
+    }
+
 
 
 }
