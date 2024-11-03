@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class BankTest {
 
@@ -71,7 +72,7 @@ public class BankTest {
     }
 
     @Test
-    void BankSystemOpenAccount(){
+    void bankSystemOpenAccount(){
         BankSystem bankSystem = new BankSystem(new ArrayList<BankAccount>(), new ArrayList<Transaction>());
 
         int customerId = bankSystem.openAccount("John Doe");
@@ -79,7 +80,7 @@ public class BankTest {
 
 
     @Test
-    void BankSystemDeposit(){
+    void bankSystemDeposit(){
         BankSystem bankSystem = new BankSystem(new ArrayList<BankAccount>(), new ArrayList<Transaction>());
 
         int customerId = bankSystem.openAccount("John Doe");
@@ -87,13 +88,26 @@ public class BankTest {
     }
 
     @Test
-    void BankSystemWithdraw(){
+    void bankSystemWithdraw(){
         BankSystem bankSystem = new BankSystem(new ArrayList<BankAccount>(), new ArrayList<Transaction>());
 
         int customerId = bankSystem.openAccount("John Doe");
         bankSystem.deposit(customerId, 999);
 
         bankSystem.withdraw(customerId, 100);
+    }
+
+    @Test
+    public void bankSystemWithdrawInsufficient(){
+        BankSystem bankSystem = new BankSystem(new ArrayList<BankAccount>(), new ArrayList<Transaction>());
+
+        int customerId = bankSystem.openAccount("John Doe");
+        bankSystem.deposit(customerId, 999);
+
+        assertThrows(Error.class, () -> {
+            bankSystem.withdraw(customerId, 1000);
+        });
+
     }
 
 

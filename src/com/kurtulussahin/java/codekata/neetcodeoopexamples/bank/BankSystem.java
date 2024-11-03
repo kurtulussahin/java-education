@@ -28,6 +28,9 @@ public class BankSystem {
     }
 
     public void withdraw(int customerId, int amount) {
+        if(amount>bankAccounts.get(customerId).getBalance()){
+            throw new Error("Insufficient funds");
+        }
         BankAccount account = bankAccounts.get(customerId);
         account.withdraw(amount);
     }
