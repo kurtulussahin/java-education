@@ -78,6 +78,15 @@ public class BankTest {
     }
 
 
+    @Test
+    void BankSystemDeposit(){
+        BankSystem bankSystem = new BankSystem(new ArrayList<BankAccount>(), new ArrayList<Transaction>());
+
+        int customerId = bankSystem.openAccount("John Doe");
+        bankSystem.deposit(customerId, 999);
+    }
+
+
 
 
 }

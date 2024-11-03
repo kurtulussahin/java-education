@@ -21,4 +21,9 @@ public class BankSystem {
 
         return customerId;
     }
+
+    public void deposit(int customerId, int amount) {
+        BankAccount account = bankAccounts.get(customerId);
+        account.deposit(amount);
+    }
 }
