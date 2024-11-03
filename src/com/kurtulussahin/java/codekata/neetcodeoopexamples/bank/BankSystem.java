@@ -34,4 +34,8 @@ public class BankSystem {
         BankAccount account = bankAccounts.get(customerId);
         account.withdraw(amount);
     }
+
+    public BankAccount getAccount(int customerId) {
+        return bankAccounts.get(customerId);
+    }
 }

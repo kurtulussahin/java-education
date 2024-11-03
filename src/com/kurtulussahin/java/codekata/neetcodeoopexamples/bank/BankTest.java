@@ -98,7 +98,7 @@ public class BankTest {
     }
 
     @Test
-    public void bankSystemWithdrawInsufficient(){
+    void bankSystemWithdrawInsufficient(){
         BankSystem bankSystem = new BankSystem(new ArrayList<BankAccount>(), new ArrayList<Transaction>());
 
         int customerId = bankSystem.openAccount("John Doe");
@@ -111,6 +111,13 @@ public class BankTest {
     }
 
 
+    @Test
+    void bankSystemGetAccount(){
+        BankSystem bankSystem = new BankSystem(new ArrayList<BankAccount>(), new ArrayList<Transaction>());
 
+        int customerId = bankSystem.openAccount("John Doe");
+        BankAccount account= bankSystem.getAccount(customerId);
+
+    }
 
 }
