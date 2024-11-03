@@ -120,4 +120,16 @@ public class BankTest {
 
     }
 
+    @Test
+    void bankSystemGetAccounts(){
+        BankSystem bankSystem = new BankSystem(new ArrayList<BankAccount>(), new ArrayList<Transaction>());
+
+        bankSystem.openAccount("John Doe");
+        bankSystem.openAccount("John Doe 2");
+        bankSystem.openAccount("John Doe 3");
+
+        assertEquals(3,bankSystem.getAccounts().size());
+
+    }
+
 }

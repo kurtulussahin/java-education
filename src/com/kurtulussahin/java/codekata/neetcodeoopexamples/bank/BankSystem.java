@@ -1,6 +1,7 @@
 package com.kurtulussahin.java.codekata.neetcodeoopexamples.bank;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class BankSystem {
     private ArrayList<BankAccount> bankAccounts;
@@ -37,5 +38,10 @@ public class BankSystem {
 
     public BankAccount getAccount(int customerId) {
         return bankAccounts.get(customerId);
+    }
+
+    public List<BankAccount> getAccounts() {
+
+        return bankAccounts;
     }
 }
