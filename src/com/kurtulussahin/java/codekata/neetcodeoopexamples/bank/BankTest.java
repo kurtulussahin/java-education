@@ -44,6 +44,15 @@ public class BankTest {
 
     }
 
+    @Test
+    void createWithdrawTransaction(){
+        int customerId=1;
+        int amount = 999;
+
+        Transaction transaction = new Withdraw(customerId, amount );
+
+    }
+
 
 
 }
