@@ -86,6 +86,16 @@ public class BankTest {
         bankSystem.deposit(customerId, 999);
     }
 
+    @Test
+    void BankSystemWithdraw(){
+        BankSystem bankSystem = new BankSystem(new ArrayList<BankAccount>(), new ArrayList<Transaction>());
+
+        int customerId = bankSystem.openAccount("John Doe");
+        bankSystem.deposit(customerId, 999);
+
+        bankSystem.withdraw(customerId, 100);
+    }
+
 
 
 

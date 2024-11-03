@@ -26,4 +26,9 @@ public class BankSystem {
         BankAccount account = bankAccounts.get(customerId);
         account.deposit(amount);
     }
+
+    public void withdraw(int customerId, int amount) {
+        BankAccount account = bankAccounts.get(customerId);
+        account.withdraw(amount);
+    }
 }
