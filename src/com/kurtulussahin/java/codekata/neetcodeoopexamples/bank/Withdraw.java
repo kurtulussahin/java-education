@@ -10,6 +10,6 @@ public class Withdraw extends Transaction {
 
     @Override
     public String getDiscription() {
-        return "";
+        return " withdrew " + amount + " from account " + getCustomerId();
     }
 }

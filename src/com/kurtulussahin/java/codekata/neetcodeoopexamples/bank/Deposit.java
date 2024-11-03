@@ -10,6 +10,6 @@ public class Deposit extends Transaction {
 
     @Override
     public String getDiscription() {
-        return "";
+        return " deposited " + amount + " to account " + getCustomerId();
     }
 }
