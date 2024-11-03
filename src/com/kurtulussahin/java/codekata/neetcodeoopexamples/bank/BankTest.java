@@ -26,6 +26,15 @@ public class BankTest {
         assertEquals(300,account.getBalance() );
     }
 
+    @Test
+    void withdraw(){
+        BankAccount account = new BankAccount (1, "Kurtuluş Şahin", 999);
+        account.withdraw(100);
+        account.withdraw(100);
+        account.withdraw(100);
+        assertEquals(699,account.getBalance() );
+    }
+
 
 
 }
