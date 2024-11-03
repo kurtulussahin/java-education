@@ -53,6 +53,14 @@ public class BankTest {
 
     }
 
+    @Test
+    void openAccountTransaction(){
+        int customerId=1;
+
+        Transaction transaction = new OpenAccount(customerId );
+
+    }
+
 
 
 }
