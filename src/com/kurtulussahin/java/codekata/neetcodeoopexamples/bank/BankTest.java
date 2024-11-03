@@ -35,6 +35,15 @@ public class BankTest {
         assertEquals(699,account.getBalance() );
     }
 
+    @Test
+    void createDepositTransaction(){
+        int customerId=1;
+        int amount = 999;
+
+        Transaction transaction = new Deposit(customerId, amount );
+
+    }
+
 
 
 }
