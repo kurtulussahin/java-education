@@ -18,7 +18,6 @@ public class BankTest {
     void getBalance(){
         BankAccount account = new BankAccount (1, "John Doe", 999);
         assertEquals(999,account.getBalance() );
-
     }
 
     @Test
@@ -45,7 +44,6 @@ public class BankTest {
         int amount = 999;
 
         Transaction transaction = new Deposit(customerId, amount );
-
     }
 
     @Test
@@ -54,7 +52,6 @@ public class BankTest {
         int amount = 999;
 
         Transaction transaction = new Withdraw(customerId, amount );
-
     }
 
     @Test
@@ -62,13 +59,11 @@ public class BankTest {
         int customerId=1;
 
         Transaction transaction = new OpenAccount(customerId );
-
     }
 
     @Test
     void createBankSystem(){
         BankSystem bankSystem = new BankSystem(new ArrayList<BankAccount>(), new ArrayList<Transaction>());
-
     }
 
     @Test
