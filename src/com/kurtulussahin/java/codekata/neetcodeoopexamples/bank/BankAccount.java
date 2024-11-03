@@ -10,4 +10,8 @@ public class BankAccount {
         this.name = name;
         this.balance = balance;
     }
+
+    public int getBalance() {
+        return balance;
+    }
 }
