@@ -13,7 +13,7 @@ public class BankSystem {
 
     public int openAccount(String CustomerName) {
         int customerId= bankAccounts.size();
-        BankAccount account = new BankAccount (customerId, "John Doe", 0);
+        BankAccount account = new BankAccount (customerId, CustomerName, 0);
         bankAccounts.add(account);
 
         Transaction transaction = new OpenAccount(customerId );

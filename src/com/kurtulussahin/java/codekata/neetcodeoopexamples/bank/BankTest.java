@@ -71,7 +71,7 @@ public class BankTest {
     }
 
     @Test
-    void openAccount(){
+    void BankSystemOpenAccount(){
         BankSystem bankSystem = new BankSystem(new ArrayList<BankAccount>(), new ArrayList<Transaction>());
 
         int customerId = bankSystem.openAccount("John Doe");
