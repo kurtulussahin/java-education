@@ -64,7 +64,10 @@ public class Bank {
         User user = new User(firstName,lastName,pin, this);
         this.users.add(user);
 
-        Account newAccount = new Account("Savings", user,this);
+        Account account = new Account("Savings", user,this);
+
+        user.addAccount(account);
+        this.addAccount(account);
 
         return user;
     }
