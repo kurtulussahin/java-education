@@ -174,4 +174,16 @@ public class BankTest {
 
     }
 
+    @Test
+    void withdrawAtBranch(){
+        BankSystem bankSystem = new BankSystem(new ArrayList<BankAccount>(), new ArrayList<Transaction>());
+        BankBranch branch1 = new BankBranch("Adress 1", 1000000, bankSystem);
+
+        int customerId = branch1.openAccount("John Doe");
+        int amount  = 1000;
+        branch1.deposit(customerId,amount);
+        branch1.withdraw(customerId,amount);
+
+    }
+
 }

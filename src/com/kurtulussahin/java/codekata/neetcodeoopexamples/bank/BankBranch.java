@@ -17,5 +17,14 @@ public class BankBranch {
 
     public void deposit(int customerId, int amount) {
         bankSystem.deposit(customerId,amount);
+        this.cashOnHand += amount;
+    }
+
+    public void withdraw(int customerId, int amount) {
+        if (amount > this.cashOnHand) {
+            throw new Error("Branch does not have enough cash");
+        }
+        this.cashOnHand -= amount;
+        bankSystem.withdraw(customerId,amount);
     }
 }
