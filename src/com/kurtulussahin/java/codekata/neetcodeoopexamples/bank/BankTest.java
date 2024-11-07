@@ -146,4 +146,12 @@ public class BankTest {
         assertEquals(3,bankSystem.getAccounts().size());
     }
 
+    @Test
+    void createBankBranch(){
+        BankSystem bankSystem = new BankSystem(new ArrayList<BankAccount>(), new ArrayList<Transaction>());
+
+        BankBranch branch1 = new BankBranch("Adress 1", 1000000, bankSystem);
+
+    }
+
 }
