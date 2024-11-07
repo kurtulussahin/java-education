@@ -11,6 +11,12 @@ public class Bank {
     private ArrayList<User> users;
     private ArrayList<Account> accounts;
 
+    public Bank(String name) {
+        this.name = name;
+        this.users=new ArrayList<User>();
+        this.accounts=new ArrayList<Account>();
+    }
+
     public String getNewUserUUID() {
         String uuid;
         Random rng=new Random();
