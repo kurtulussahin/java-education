@@ -59,4 +59,13 @@ public class Bank {
     public void addAccount(Account account) {
         this.accounts.add(account);
     }
+
+    public User addUser(String firstName, String lastName, String pin){
+        User user = new User(firstName,lastName,pin, this);
+        this.users.add(user);
+
+        Account newAccount = new Account("Savings", user,this);
+
+        return user;
+    }
 }
