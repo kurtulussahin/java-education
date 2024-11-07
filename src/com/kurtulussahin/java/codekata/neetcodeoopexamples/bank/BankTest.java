@@ -1,7 +1,6 @@
 package com.kurtulussahin.java.codekata.neetcodeoopexamples.bank;
 
 import org.junit.jupiter.api.Test;
-
 import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -102,7 +101,6 @@ public class BankTest {
         assertThrows(Error.class, () -> {
             bankSystem.withdraw(customerId, 1000);
         });
-
     }
 
 
@@ -151,7 +149,6 @@ public class BankTest {
         BankSystem bankSystem = new BankSystem(new ArrayList<BankAccount>(), new ArrayList<Transaction>());
 
         BankBranch branch1 = new BankBranch("Adress 1", 1000000, bankSystem);
-
     }
 
     @Test
@@ -160,7 +157,6 @@ public class BankTest {
         BankBranch branch1 = new BankBranch("Adress 1", 1000000, bankSystem);
 
         branch1.openAccount("John Doe");
-
     }
 
     @Test
@@ -173,7 +169,6 @@ public class BankTest {
         branch1.deposit(customerId,amount);
 
     }
-
     @Test
     void withdrawAtBranch(){
         BankSystem bankSystem = new BankSystem(new ArrayList<BankAccount>(), new ArrayList<Transaction>());
@@ -183,7 +178,6 @@ public class BankTest {
         int amount  = 1000;
         branch1.deposit(customerId,amount);
         branch1.withdraw(customerId,amount);
-
     }
 
 }
