@@ -10,4 +10,8 @@ public class BankBranch {
         this.cashOnHand = cashOnHand;
         this.bankSystem = bankSystem;
     }
+
+    public int openAccount(String customerName) {
+        return bankSystem.openAccount(customerName);
+    }
 }

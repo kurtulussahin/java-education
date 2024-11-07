@@ -154,4 +154,13 @@ public class BankTest {
 
     }
 
+    @Test
+    void openAccountAtBranch(){
+        BankSystem bankSystem = new BankSystem(new ArrayList<BankAccount>(), new ArrayList<Transaction>());
+        BankBranch branch1 = new BankBranch("Adress 1", 1000000, bankSystem);
+
+        branch1.openAccount("John Doe");
+
+    }
+
 }
