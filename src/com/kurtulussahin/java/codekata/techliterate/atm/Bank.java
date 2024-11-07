@@ -1,5 +1,7 @@
 package com.kurtulussahin.java.codekata.techliterate.atm;
 
+import org.apache.commons.lang3.ObjectUtils;
+
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -70,5 +72,14 @@ public class Bank {
         this.addAccount(account);
 
         return user;
+    }
+
+    public User userLogin(String userID, String pin){
+        for(User u : users){
+            if(u.getUUID().compareTo(userID)==0 && u.validatePin(pin)){
+                return u;
+            }
+        }
+        return null;
     }
 }

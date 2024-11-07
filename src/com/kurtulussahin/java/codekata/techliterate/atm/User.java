@@ -38,4 +38,19 @@ public class User {
     public String getUUID() {
         return uuid;
     }
+
+    public boolean validatePin(String pin) {
+        MessageDigest md= null;
+        try {
+            md = MessageDigest.getInstance("MD5");
+            byte[] newPinHash=md.digest(pin.getBytes());
+            if(pinHash.equals(newPinHash)){
+                return true;
+            }
+        } catch (NoSuchAlgorithmException e) {
+            System.err.println("error, caught NoSuchAlgorithmException");
+            throw new RuntimeException(e);
+        }
+        return false;
+    }
 }
