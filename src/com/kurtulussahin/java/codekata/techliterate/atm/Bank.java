@@ -20,7 +20,7 @@ public class Bank {
         return "";
     }
 
-    //TODO
     public void addAccount(Account account) {
+        this.accounts.add(account);
     }
 }

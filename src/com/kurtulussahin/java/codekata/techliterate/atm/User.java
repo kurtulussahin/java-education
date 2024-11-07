@@ -31,7 +31,7 @@ public class User {
         System.out.printf("New user %s, %s with Id %s created.\n", this.lastName, firstName, this.uuid);
     }
 
-    //TODO
     public void addAccount(Account account) {
+        this.accounts.add(account);
     }
 }
