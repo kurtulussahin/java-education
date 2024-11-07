@@ -14,4 +14,8 @@ public class BankBranch {
     public int openAccount(String customerName) {
         return bankSystem.openAccount(customerName);
     }
+
+    public void deposit(int customerId, int amount) {
+        bankSystem.deposit(customerId,amount);
+    }
 }
