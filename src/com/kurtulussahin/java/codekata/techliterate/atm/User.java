@@ -30,4 +30,8 @@ public class User {
         this.accounts=new ArrayList<Account>();
         System.out.printf("New user %s, %s with Id %s created.\n", this.lastName, firstName, this.uuid);
     }
+
+    //TODO
+    public void addAccount(Account account) {
+    }
 }

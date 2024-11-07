@@ -8,8 +8,19 @@ public class Bank {
     private ArrayList<User> user;
     private ArrayList<Account> accounts;
 
+    //TODO
     public String getNewUserUUID() {
 
         return "";
+    }
+
+    //TODO
+    public String getNewAccountUUID() {
+
+        return "";
+    }
+
+    //TODO
+    public void addAccount(Account account) {
     }
 }
