@@ -53,4 +53,12 @@ public class User {
         }
         return false;
     }
+
+    public String getFirstname() {
+        return firstName;
+    }
+
+    //TODO
+    public void printAccountsSummary() {
+    }
 }
