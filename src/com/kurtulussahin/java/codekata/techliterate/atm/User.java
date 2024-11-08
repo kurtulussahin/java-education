@@ -60,5 +60,10 @@ public class User {
 
     //TODO
     public void printAccountsSummary() {
+        System.out.printf("\n\n%s' accounts summary", firstName);
+        for(int a=0; a<accounts.size(); a++){
+            System.out.printf("%d) %s\n", accounts.get(a).getSummary() );
+        }
+        System.out.println();
     }
 }

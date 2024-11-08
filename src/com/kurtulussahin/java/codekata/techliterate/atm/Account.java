@@ -21,4 +21,26 @@ public class Account {
     public String getUUID() {
         return uuid;
     }
+
+    public String getSummary() {
+        double balance = this.getBalance();
+
+        if(balance>=0){
+            return String.format("%s : $%.02f : %s", uuid, balance, name);
+        }else {
+            return String.format("%s : $(%.02f) : %s", uuid, balance, name);
+
+        }
+
+    }
+
+    //TODO
+    private double getBalance() {
+        double balance=0;
+                for(Transaction t : transactions ){
+                    balance+=t.getAmount();
+                }
+        return balance;
+
+    }
 }
