@@ -65,7 +65,6 @@ public class ATM {
 
     }
 
-    //TODO
     private static void transferFunds(User user, Scanner sc) {
 
         int fromAcct;
