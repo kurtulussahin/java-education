@@ -121,7 +121,6 @@ public class ATM {
     private static void withdraw(User user, Scanner sc) {
     }
 
-    //TODO
     private static void showTransactionHistory(User user, Scanner sc) {
 
         int theAccount;
