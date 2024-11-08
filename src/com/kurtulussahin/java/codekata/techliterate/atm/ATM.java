@@ -113,8 +113,44 @@ public class ATM {
                 String.format("Transfer to account %s", user.getAcctUUID(fromAcct)));
     }
 
-    //TODO
+
     private static void deposit(User user, Scanner sc) {
+
+        int toAcct;
+        double amount;
+        double acctBal;
+        String memo;
+
+        do{
+            System.out.printf("Enter the number (1-%d) of the account\n" +
+                    "to transfer from: ");
+            toAcct=sc.nextInt()-1;
+
+            if(toAcct<0 || toAcct >= user.numAccounts()){
+                System.out.println("ınvalid account. Please try again.");
+            }
+        }while(toAcct<0 || toAcct>=user.numAccounts());
+
+        acctBal=user.getAcctBalance(toAcct);
+
+        do{
+            System.out.printf("Enter the amount to transfer(max $%.02f): $", acctBal);
+            amount=sc.nextDouble();
+
+            if(amount<0){
+                System.out.println("Amount must be greater than zero.");
+            }else if(amount>1000000){
+                System.out.printf("Amount must not be greater than \n"
+                        + "balance of  $%.02f.\n", 1000000);
+            }
+        }while(amount<0 || amount>acctBal);
+
+        sc.nextLine();
+
+        System.out.println("Enter a memo: ");
+        memo=sc.nextLine();
+
+        user.addAcctTransaction(toAcct, amount, memo);
     }
 
     private static void withdraw(User user, Scanner sc) {
