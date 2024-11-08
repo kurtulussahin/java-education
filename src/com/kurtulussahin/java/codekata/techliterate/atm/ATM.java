@@ -79,6 +79,21 @@ public class ATM {
 
     //TODO
     private static void showTransactionHistory(User user, Scanner sc) {
+
+        int theAccount;
+        do{
+            System.out.printf("Enter the number (1-%d) of of the aacount\n" +
+                    " whose transactions you want to see: ",
+                    user.numAccounts());
+
+            theAccount=sc.nextInt()-1;
+
+            if(theAccount<0 || theAccount >=user.numAccounts()){
+                System.out.println("ınvalid account. Please try again.");
+            }
+        }while(theAccount<0 || theAccount>=user.numAccounts());
+
+        user.printAccountTransactionsHistory(theAccount);
     }
 
     private static User mainMenuPrompt(Bank bank, Scanner sc) {
