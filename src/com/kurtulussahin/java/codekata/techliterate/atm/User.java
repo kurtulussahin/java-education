@@ -74,4 +74,18 @@ public class User {
     public void printAccountTransactionsHistory(int accIdx) {
         this.accounts.get(accIdx).printTransHistory();
     }
+
+    public double getAcctBalance(int accountID) {
+
+        return accounts.get(accountID).getBalance();
+    }
+
+    public void addAcctTransaction(int accountID, double amount, String memo) {
+        accounts.get(accountID).addTransaction(amount, memo);
+
+    }
+
+    public Object getAcctUUID(int accountID) {
+        return accounts.get(accountID).getUUID();
+    }
 }
