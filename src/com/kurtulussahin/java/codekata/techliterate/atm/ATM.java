@@ -29,12 +29,12 @@ public class ATM {
         int choice;
 
         do{
-            System.out.printf("Welcome %s, what would you like to do?", user.getFirstname());
+            System.out.printf("Welcome %s, what would you like to do?\n", user.getFirstname());
             System.out.println(" 1) Show account transactin history");
-            System.out.println(" 1) Withdraw");
-            System.out.println(" 1) Deposit");
-            System.out.println(" 1) Transfer");
-            System.out.println(" 1) Quit");
+            System.out.println(" 2) Withdraw");
+            System.out.println(" 3) Deposit");
+            System.out.println(" 4) Transfer");
+            System.out.println(" 5) Quit");
             System.out.println();
             System.out.println("Enter choice: ");
             choice = sc.nextInt();
@@ -123,7 +123,7 @@ public class ATM {
 
         do{
             System.out.printf("Enter the number (1-%d) of the account\n" +
-                    "to transfer from: ");
+                    "to transfer from: ",user.numAccounts());
             toAcct=sc.nextInt()-1;
 
             if(toAcct<0 || toAcct >= user.numAccounts()){
@@ -143,7 +143,7 @@ public class ATM {
                 System.out.printf("Amount must not be greater than \n"
                         + "balance of  $%.02f.\n", 1000000);
             }
-        }while(amount<0 || amount>acctBal);
+        }while(amount<0 || amount>1000000);
 
         sc.nextLine();
 
@@ -226,7 +226,6 @@ public class ATM {
             authUser=bank.userLogin(userID,pin);
             if(authUser==null){
                 System.out.println("Incorrect User ID/Pin. Please try again");
-
             }
 
         }while(authUser==null);

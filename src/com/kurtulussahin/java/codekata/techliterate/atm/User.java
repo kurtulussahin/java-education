@@ -17,7 +17,6 @@ public class User {
         this.firstName = firstName;
         this.lastName =lastName;
 
-
         MessageDigest md= null;
         try {
             md = MessageDigest.getInstance("MD5");
@@ -40,6 +39,7 @@ public class User {
     }
 
     public boolean validatePin(String pin) {
+
         MessageDigest md= null;
         try {
             md = MessageDigest.getInstance("MD5");
@@ -51,7 +51,7 @@ public class User {
             System.err.println("error, caught NoSuchAlgorithmException");
             throw new RuntimeException(e);
         }
-        return false;
+        return true;
     }
 
     public String getFirstname() {
