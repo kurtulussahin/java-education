@@ -6,9 +6,7 @@ import com.kurtulussahin.java.codekata.gamedevelopment.ryisnow2dgame.src.main.Ke
 import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
-import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileReader;
 import java.io.IOException;
 
 public class Player extends Entity{
@@ -73,9 +71,8 @@ public class Player extends Entity{
                 direction = "right";
                 x+=speed;
             }
-
             spriteCounter++;
-            if(spriteCounter>12){
+            if(spriteCounter==9){
                 if(spriteNum==1){
                     spriteNum=2;
                 }else if (spriteNum==2){
@@ -87,8 +84,6 @@ public class Player extends Entity{
     }
 
     public void draw(Graphics2D g2){
-        //g2.setColor(Color.white);
-        //g2.fillRect(x,y,gp.tileSize, gp.tileSize);
 
         BufferedImage image = null;
 
@@ -96,8 +91,7 @@ public class Player extends Entity{
             case "up":
                 if(spriteNum==1){
                     image = up1;
-                }
-                if(spriteNum==2){
+                }else if(spriteNum==2){
                     image = up2;
                 }
                 break;
@@ -126,7 +120,6 @@ public class Player extends Entity{
                 }
                 break;
         }
-
         g2.drawImage(image, x,y, gp.tileSize, gp.tileSize, null);
     }
 }
