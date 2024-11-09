@@ -1,6 +1,7 @@
 package com.kurtulussahin.java.codekata.gamedevelopment.ryisnow2dgame.src.main;
 
 import com.kurtulussahin.java.codekata.gamedevelopment.ryisnow2dgame.src.entity.Player;
+import com.kurtulussahin.java.codekata.gamedevelopment.ryisnow2dgame.src.tile.TileManager;
 
 import javax.swing.*;
 import java.awt.*;
@@ -17,6 +18,7 @@ public class GamePanel extends JPanel implements Runnable {
 
     int FPS=60;
 
+    TileManager tileM = new TileManager(this);
     KeyHandler keyH = new KeyHandler();
     Thread gameThread;
     Player player = new Player(this, keyH);
@@ -64,12 +66,15 @@ public class GamePanel extends JPanel implements Runnable {
     }
 
     public void update(){
-        player.update();;
+        player.update();
     }
 
     public void paintComponent(Graphics g){
         super.paintComponent(g);
         Graphics2D g2 = (Graphics2D) g;
+
+        tileM.draw(g2);
+
         player.draw(g2);
         g2.dispose();
     }
