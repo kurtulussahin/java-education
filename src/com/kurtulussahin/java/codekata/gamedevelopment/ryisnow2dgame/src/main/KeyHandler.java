@@ -1,4 +1,4 @@
-package com.kurtulussahin.java.codekata.gamedevelopment.ryisnow2dgame;
+package com.kurtulussahin.java.codekata.gamedevelopment.ryisnow2dgame.src.main;
 
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
