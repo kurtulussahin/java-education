@@ -43,7 +43,6 @@ public class GamePanel extends JPanel implements Runnable {
         long timer=0;
         int drawCount=0;
 
-
         while(gameThread != null){
             currentTime = System.nanoTime();
             delta+=(currentTime-lastTime)/drawInterval;
@@ -83,9 +82,7 @@ public class GamePanel extends JPanel implements Runnable {
     }
 
     public void paintComponent(Graphics g){
-
         super.paintComponent(g);
-
         Graphics2D g2 = (Graphics2D) g;
 
         g2.setColor(Color.white);
