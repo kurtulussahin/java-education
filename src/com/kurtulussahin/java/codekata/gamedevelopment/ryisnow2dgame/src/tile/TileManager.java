@@ -59,6 +59,18 @@ public class TileManager {
             tile[2].image= ImageIO.read(new File(
                     "src/com/kurtulussahin/java/codekata/gamedevelopment/ryisnow2dgame/res/tiles/water.png"));
 
+            tile[3]=new Tile();
+            tile[3].image= ImageIO.read(new File(
+                    "src/com/kurtulussahin/java/codekata/gamedevelopment/ryisnow2dgame/res/tiles/earth.png"));
+
+            tile[4]=new Tile();
+            tile[4].image= ImageIO.read(new File(
+                    "src/com/kurtulussahin/java/codekata/gamedevelopment/ryisnow2dgame/res/tiles/tree.png"));
+
+            tile[5]=new Tile();
+            tile[5].image= ImageIO.read(new File(
+                    "src/com/kurtulussahin/java/codekata/gamedevelopment/ryisnow2dgame/res/tiles/sand.png"));
+
         }catch(IOException e){
             e.printStackTrace();
         }
