@@ -68,7 +68,7 @@ public class Player extends Entity{
         }
     }
 
-    public void update(){
+    public void update() {
 
         if(keyH.upPressed==true || keyH.downPressed==true || keyH.leftPressed==true || keyH.rightPressed==true){
 
@@ -114,23 +114,26 @@ public class Player extends Entity{
         }
     }
 
-    public void pickUpObject(int i){
+    public void pickUpObject(int i) {
         if(i!=999){
             String objectName=gp.obj[i].name;
             switch(objectName){
                 case "Key":
+                    gp.playSE(1);
                     hasKey++;
                     gp.obj[i]=null;
                     System.out.println("Key:" + hasKey);
                     break;
                 case "Door":
                     if(hasKey>0){
+                        gp.playSE(3);
                         gp.obj[i]=null;
                         hasKey--;
                     }
                     System.out.println("Key:" + hasKey);
                     break;
                 case "Boots":
+                    gp.playSE(2);
                     speed+=2;
                     gp.obj[i]=null;
                     break;

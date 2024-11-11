@@ -15,10 +15,10 @@ public class Sound {
 
     public Sound() throws MalformedURLException {
         soundURL[0]=new File("src/com/kurtulussahin/java/codekata/gamedevelopment/ryisnow2dgame/res/sound/BlueBoyAdventure.wav").toURI().toURL();
-        soundURL[1]=new File("src/com/kurtulussahin/java/codekata/gamedevelopment/ryisnow2dgame/res/sound/coin.wav").toURI().toURL();;
-        soundURL[2]=new File("src/com/kurtulussahin/java/codekata/gamedevelopment/ryisnow2dgame/res/sound/powerup.wav").toURI().toURL();;
-        soundURL[3]=new File("src/com/kurtulussahin/java/codekata/gamedevelopment/ryisnow2dgame/res/sound/unlock.wav").toURI().toURL();;
-        soundURL[4]=new File("src/com/kurtulussahin/java/codekata/gamedevelopment/ryisnow2dgame/res/sound/fanfare.wav").toURI().toURL();;
+        soundURL[1]=new File("src/com/kurtulussahin/java/codekata/gamedevelopment/ryisnow2dgame/res/sound/coin.wav").toURI().toURL();
+        soundURL[2]=new File("src/com/kurtulussahin/java/codekata/gamedevelopment/ryisnow2dgame/res/sound/powerup.wav").toURI().toURL();
+        soundURL[3]=new File("src/com/kurtulussahin/java/codekata/gamedevelopment/ryisnow2dgame/res/sound/unlock.wav").toURI().toURL();
+        soundURL[4]=new File("src/com/kurtulussahin/java/codekata/gamedevelopment/ryisnow2dgame/res/sound/fanfare.wav").toURI().toURL();
     }
 
     public void setFile(int i){
@@ -28,12 +28,21 @@ public class Sound {
             clip=AudioSystem.getClip();
             clip.open(ais);
         }catch(Exception e){
+            e.printStackTrace();
         }
 
     }
 
-    public void play(){
-        clip.stop();
+    public void play() {
+        clip.start();
+        //clip.loop(1);
+        try {
+            Thread.sleep( 1 );
+        } catch (InterruptedException e) {
+
+        }
+
+
     }
 
     public void loop(){

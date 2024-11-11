@@ -4,6 +4,7 @@ import com.kurtulussahin.java.codekata.gamedevelopment.ryisnow2dgame.src.entity.
 import com.kurtulussahin.java.codekata.gamedevelopment.ryisnow2dgame.src.object.SuperObject;
 import com.kurtulussahin.java.codekata.gamedevelopment.ryisnow2dgame.src.tile.TileManager;
 
+import javax.sound.sampled.Clip;
 import javax.swing.*;
 import java.awt.*;
 import java.net.MalformedURLException;
@@ -123,5 +124,6 @@ public class GamePanel extends JPanel implements Runnable {
     public void playSE(int i){
         sound.setFile(i);
         sound.play();
+
     }
 }
