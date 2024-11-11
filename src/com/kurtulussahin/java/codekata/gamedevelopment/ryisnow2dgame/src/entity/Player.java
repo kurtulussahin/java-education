@@ -86,7 +86,6 @@ public class Player extends Entity{
             }
             else if(keyH.rightPressed==true){
                 direction = "right";
-
             }
 
             collisionOn = false;
