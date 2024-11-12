@@ -35,14 +35,11 @@ public class Sound {
 
     public void play() {
         clip.start();
-        //clip.loop(1);
         try {
-            Thread.sleep( 1 );
+            Thread.sleep( 1);
         } catch (InterruptedException e) {
 
         }
-
-
     }
 
     public void loop(){
