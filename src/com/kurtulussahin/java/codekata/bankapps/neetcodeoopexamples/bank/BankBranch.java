@@ -1,4 +1,4 @@
-package com.kurtulussahin.java.codekata.neetcodeoopexamples.bank;
+package com.kurtulussahin.java.codekata.bankapps.neetcodeoopexamples.bank;
 
 public class BankBranch {
     private String address;

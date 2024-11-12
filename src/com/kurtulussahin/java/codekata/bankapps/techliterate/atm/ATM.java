@@ -1,4 +1,4 @@
-package com.kurtulussahin.java.codekata.techliterate.atm;
+package com.kurtulussahin.java.codekata.bankapps.techliterate.atm;
 
 import java.util.Scanner;
 
