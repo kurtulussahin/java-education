@@ -1,8 +1,6 @@
 package com.kurtulussahin.java.codekata.gamedevelopment.ryisnow2dgame.src.main;
 
-import javax.sound.sampled.AudioInputStream;
-import javax.sound.sampled.AudioSystem;
-import javax.sound.sampled.Clip;
+import javax.sound.sampled.*;
 import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URISyntaxException;
@@ -11,14 +9,19 @@ import java.net.URL;
 public class Sound {
 
     Clip clip;
+    SourceDataLine sourceDataLine;
     URL soundURL[]=new URL[30];
 
-    public Sound() throws MalformedURLException {
-        soundURL[0]=new File("src/com/kurtulussahin/java/codekata/gamedevelopment/ryisnow2dgame/res/sound/BlueBoyAdventure.wav").toURI().toURL();
-        soundURL[1]=new File("src/com/kurtulussahin/java/codekata/gamedevelopment/ryisnow2dgame/res/sound/coin.wav").toURI().toURL();
-        soundURL[2]=new File("src/com/kurtulussahin/java/codekata/gamedevelopment/ryisnow2dgame/res/sound/powerup.wav").toURI().toURL();
-        soundURL[3]=new File("src/com/kurtulussahin/java/codekata/gamedevelopment/ryisnow2dgame/res/sound/unlock.wav").toURI().toURL();
-        soundURL[4]=new File("src/com/kurtulussahin/java/codekata/gamedevelopment/ryisnow2dgame/res/sound/fanfare.wav").toURI().toURL();
+    public Sound()  {
+        try {
+            soundURL[0]=new File("src/com/kurtulussahin/java/codekata/gamedevelopment/ryisnow2dgame/res/sound/BlueBoyAdventure.wav").toURI().toURL();
+            soundURL[1]=new File("src/com/kurtulussahin/java/codekata/gamedevelopment/ryisnow2dgame/res/sound/coin.wav").toURI().toURL();
+            soundURL[2]=new File("src/com/kurtulussahin/java/codekata/gamedevelopment/ryisnow2dgame/res/sound/powerup.wav").toURI().toURL();
+            soundURL[3]=new File("src/com/kurtulussahin/java/codekata/gamedevelopment/ryisnow2dgame/res/sound/unlock.wav").toURI().toURL();
+            soundURL[4]=new File("src/com/kurtulussahin/java/codekata/gamedevelopment/ryisnow2dgame/res/sound/fanfare.wav").toURI().toURL();
+        } catch (MalformedURLException e) {
+
+        }
     }
 
     public void setFile(int i){
@@ -30,10 +33,9 @@ public class Sound {
         }catch(Exception e){
             e.printStackTrace();
         }
-
     }
 
-    public void play() {
+    public synchronized void play() {
         clip.start();
         try {
             Thread.sleep( 1);

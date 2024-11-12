@@ -4,11 +4,9 @@ import com.kurtulussahin.java.codekata.gamedevelopment.ryisnow2dgame.src.entity.
 import com.kurtulussahin.java.codekata.gamedevelopment.ryisnow2dgame.src.object.SuperObject;
 import com.kurtulussahin.java.codekata.gamedevelopment.ryisnow2dgame.src.tile.TileManager;
 
-import javax.sound.sampled.Clip;
 import javax.swing.*;
 import java.awt.*;
 import java.net.MalformedURLException;
-import java.net.URISyntaxException;
 
 public class GamePanel extends JPanel implements Runnable {
     final int originalTileSize = 16; //16*16 tile
@@ -28,14 +26,8 @@ public class GamePanel extends JPanel implements Runnable {
     TileManager tileM = new TileManager(this);
     KeyHandler keyH = new KeyHandler();
 
-    Sound sound;
-    {
-        try {
-            sound = new Sound();
-        } catch (MalformedURLException e) {
-            throw new RuntimeException(e);
-        }
-    }
+    Sound music= new Sound();
+    Sound se= new Sound();
 
     Thread gameThread;
     public CollisionChecker cChecker = new CollisionChecker(this);
@@ -112,18 +104,16 @@ public class GamePanel extends JPanel implements Runnable {
     }
 
     public void playMusic(int i){
-        sound.setFile(i);
-        sound.play();
-        sound.loop();
+        music.setFile(i);
+        music.loop();
     }
 
     public void stopMusic(){
-        sound.stop();
+        music.stop();
     }
 
     public void playSE(int i){
-        sound.setFile(i);
-        sound.play();
-
+        se.setFile(i);
+        se.play();
     }
 }
