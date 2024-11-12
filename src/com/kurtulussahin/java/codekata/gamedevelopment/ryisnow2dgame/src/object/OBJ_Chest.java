@@ -5,7 +5,7 @@ import java.io.File;
 
 public class OBJ_Chest extends SuperObject {
     public OBJ_Chest(){
-        name="chest";
+        name="Chest";
         try{
             image = ImageIO.read(new File(
                     "src/com/kurtulussahin/java/codekata/gamedevelopment/ryisnow2dgame/res/objects/chest.png"));
