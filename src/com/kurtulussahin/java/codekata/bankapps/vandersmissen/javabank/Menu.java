@@ -8,7 +8,8 @@ public class Menu {
     private boolean exit;
 
     public static void main(String[] args){
-
+        Menu menu = new Menu();
+        menu.runMenu();
     }
 
 
@@ -22,7 +23,38 @@ public class Menu {
     }
 
     private void performAction(int choice) {
+        switch (choice){
+            case 0:
+                System.out.println("Thank you for using our application");
+                System.exit(0);
+                break;
+            case 1:
+                createAnAccount();
+                break;
+            case 2:
+                makeADeposit();
+                break;
+            case 3:
+                makeAWithdraw();
+                break;
+            case 4:
+                listBalances();
+                break;
+            default:
+                System.out.println("Unknown error has occured");
+        }
+    }
 
+    private void listBalances() {
+    }
+
+    private void makeAWithdraw() {
+    }
+
+    private void makeADeposit() {
+    }
+
+    private void createAnAccount() {
     }
 
     private int getInput() {
@@ -48,7 +80,7 @@ public class Menu {
         System.out.println("2) Make a deposit");
         System.out.println("3) Make a withdraw");
         System.out.println("4) List account balance");
-        System.out.println("5) Exit");
+        System.out.println("0) Exit");
     }
 
     private void printHeader() {
