@@ -55,6 +55,60 @@ public class Menu {
     }
 
     private void createAnAccount() {
+        String firstName, lastName, ssn, accountType="";
+        double initialDeposit=0;
+
+        boolean valid =false;
+        while(!valid){
+            System.out.println(("Pleade enter an account type (checking/savings"));
+            accountType=keyboard.nextLine();
+            if(accountType.equalsIgnoreCase("checking") || accountType.equalsIgnoreCase("savings")){
+                valid=true;
+            }else{
+                System.out.println(("Invalid account type selected. Please enter checkin or savings"));
+            }
+        }
+
+        System.out.print("Please enter your first name: ");
+        firstName=keyboard.nextLine();
+        System.out.print("Please enter your last name: ");
+        lastName=keyboard.nextLine();
+        System.out.print("Please enter your ssn: ");
+        ssn=keyboard.nextLine();
+
+        valid=false;
+        while(!valid){
+            System.out.print("Please enter an initial deposit: ");
+            try{
+                initialDeposit=Double.parseDouble(keyboard.nextLine());
+            }catch (NumberFormatException e){
+                System.out.println("Deposit must be a number");
+            }
+            if(accountType.equalsIgnoreCase("checking")){
+                if(initialDeposit<100){
+                    System.out.println("Checking account requie a minimum of 100 dollars to open");
+                }else{
+                    valid=true;
+                }
+            } else if(accountType.equalsIgnoreCase("savings")){
+                if(initialDeposit<50){
+                    System.out.println("Savings account requie a minimum of 50 dollars to open");
+                }else{
+                    valid=true;
+                }
+            }
+        }
+
+        Account account;
+        if(accountType.equalsIgnoreCase("checking")){
+            account=new Checking(initialDeposit);
+        }else {
+            account = new Savings(initialDeposit);
+        }
+        Customer customer = new Customer(firstName, lastName, ssn, account);
+        bank.addCustomer(customer);
+        System.out.println(customer.toString());
+
     }
 
     private int getInput() {
