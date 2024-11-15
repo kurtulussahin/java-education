@@ -9,15 +9,16 @@ public class ValidatorISBN {
 
     public boolean checkISBN(String isbn) {
 
-        if(isbn.length()== LONG_ISBN_LENGTH){
-            return (isThisValid13DigitIsbn(isbn));
-        }else {
-            if (isbn.length() != SHORT_ISBN_LENGTH) throw new NumberFormatException("ISBN numbers must be 10 digits long");
-            return (isThisValid10DigitIsbn(isbn));
+        if (isbn.length() == LONG_ISBN_LENGTH) {
+            return (isThisAValidLongIsbn(isbn));
+        } else if (isbn.length() == SHORT_ISBN_LENGTH){
+            return (isThisaValidShortIsbn(isbn));
         }
+        throw new NumberFormatException("ISBN numbers must be 10 0r 13 digits long");
+
     }
 
-    private static boolean isThisValid10DigitIsbn(String isbn) {
+    private static boolean isThisaValidShortIsbn(String isbn) {
         int total = 0;
 
         for (int i = 0; i < SHORT_ISBN_LENGTH; i++) {
@@ -31,26 +32,19 @@ public class ValidatorISBN {
                 total += Character.getNumericValue(isbn.charAt(i)) * (SHORT_ISBN_LENGTH - i);
             }
         }
-
-        if (total % SHORT_ISBN_MULTIPLIER == 0) {
-            return true;
-        }
-        return false;
+        return (total % SHORT_ISBN_MULTIPLIER == 0);
     }
 
-    private static boolean isThisValid13DigitIsbn(String isbn) {
-        int total=0;
-        for(int i = 0; i< LONG_ISBN_LENGTH; i++){
-            if(i%2==0){
+    private static boolean isThisAValidLongIsbn(String isbn) {
+        int total = 0;
+        for (int i = 0; i < LONG_ISBN_LENGTH; i++) {
+            if (i % 2 == 0) {
                 total += Character.getNumericValue(isbn.charAt(i));
-            }else {
-                total += Character.getNumericValue(isbn.charAt(i))*3;
+            } else {
+                total += Character.getNumericValue(isbn.charAt(i)) * 3;
             }
         }
 
-        if (total % LONG_ISBN_MULTIPLIER == 0) {
-            return true;
-        }
-        return false;
+        return (total % LONG_ISBN_MULTIPLIER == 0);
     }
 }
