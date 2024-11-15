@@ -17,6 +17,14 @@ public class ExampleTests {
     }
 
     @Test
+    public void checkValidISBNEndingWithX(){
+        ValidatorISBN validator = new ValidatorISBN();
+        boolean result = validator.checkISBN("012000030X");
+        assertTrue(result);
+
+    }
+
+    @Test
     public void checkInValidISBN(){
         ValidatorISBN validator = new ValidatorISBN();
         boolean result = validator.checkISBN("0140449117");
@@ -27,6 +35,12 @@ public class ExampleTests {
     public void nineDigitISBNotAllowed(){
         ValidatorISBN validator = new ValidatorISBN();
         validator.checkISBN("123456789");
+    }
+
+    @Test(expected= NumberFormatException.class)
+    public void nonNumericISBNotAllowed(){
+        ValidatorISBN validator = new ValidatorISBN();
+        validator.checkISBN("HelloWorld");
     }
 
 }
