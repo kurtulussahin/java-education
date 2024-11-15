@@ -23,4 +23,10 @@ public class ExampleTests {
         assertFalse(result);
     }
 
+    @Test(expected= NumberFormatException.class)
+    public void nineDigitISBNotAllowed(){
+        ValidatorISBN validator = new ValidatorISBN();
+        validator.checkISBN("123456789");
+    }
+
 }
