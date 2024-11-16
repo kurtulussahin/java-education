@@ -5,7 +5,7 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 import static org.junit.Assert.fail;
 
-public class ExampleTests {
+public class ValidatorISBNTests {
 
     @Test
     public void check10DigitValidISBN(){
