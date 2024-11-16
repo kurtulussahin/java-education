@@ -30,11 +30,9 @@ public class StockManagementTests {
         stockManager.setWebService(testWebService);
         stockManager.setDatabaseService(testDatabaseService);
 
-
         String isbn = "0140177396";
         String locatorCode = stockManager.getLocatorCode(isbn);
         assertEquals("7396J4",locatorCode);
-
     }
 
     @Test
@@ -52,12 +50,25 @@ public class StockManagementTests {
         String locatorCode = stockManager.getLocatorCode(isbn);
 
         verify(dbSevice, times(1)).lookUp("0140177396");
-        verify(wbSevice, times(0)).lookUp(anyString());
+        verify(wbSevice, never()).lookUp(anyString());
     }
 
     @Test
     public void webServiseIsUsedIfDataIsNotPresentInDatabase(){
+        ExternalIsbnDataService dbSevice = mock(ExternalIsbnDataService.class);
+        ExternalIsbnDataService wbSevice = mock(ExternalIsbnDataService.class);
 
+        when(dbSevice.lookUp("0140177396")).thenReturn(null);
+        when(wbSevice.lookUp("0140177396")).thenReturn(new Book("0140177396", "abc", "abc"));
+
+        StockManager stockManager = new StockManager();
+        stockManager.setWebService(wbSevice);
+        stockManager.setDatabaseService(dbSevice);
+
+        String isbn = "0140177396";
+        String locatorCode = stockManager.getLocatorCode(isbn);
+
+        verify(dbSevice).lookUp("0140177396");
+        verify(wbSevice).lookUp("0140177396");
     }
-
 }
