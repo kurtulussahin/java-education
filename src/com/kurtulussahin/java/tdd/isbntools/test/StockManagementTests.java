@@ -39,7 +39,20 @@ public class StockManagementTests {
 
     @Test
     public void databaseIsUsedIfDataIsPresent(){
+        ExternalIsbnDataService dbSevice = mock(ExternalIsbnDataService.class);
+        ExternalIsbnDataService wbSevice = mock(ExternalIsbnDataService.class);
 
+        when(dbSevice.lookUp("0140177396")).thenReturn(new Book("0140177396", "abc", "abc"));
+
+        StockManager stockManager = new StockManager();
+        stockManager.setWebService(wbSevice);
+        stockManager.setDatabaseService(dbSevice);
+
+        String isbn = "0140177396";
+        String locatorCode = stockManager.getLocatorCode(isbn);
+
+        verify(dbSevice, times(1)).lookUp("0140177396");
+        verify(wbSevice, times(0)).lookUp(anyString());
     }
 
     @Test
