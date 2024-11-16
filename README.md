@@ -24,6 +24,10 @@
 
 [Clean Code Fundamentals](https://www.oreilly.com/library/view/clean-code-fundamentals/9780134661742/) - 53 hours
 
+### Linkedin Learning
+
+[Practical Test-Driven Development for Java Programmers](https://www.linkedin.com/learning/practical-test-driven-development-for-java-programmers)
+
 ## Books
 
 Head First Java
