@@ -1,4 +1,4 @@
-package com.kurtulussahin.java.tdd.isbntools.tautologies;
+package com.kurtulussahin.java.tdd.tautologies;
 import static org.junit.Assert.*;
 
 import org.junit.Test;

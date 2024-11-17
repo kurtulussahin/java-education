@@ -1,4 +1,4 @@
-package com.kurtulussahin.java.tdd.isbntools.tautologies;
+package com.kurtulussahin.java.tdd.tautologies;
 
 public class NumberValidator {
 
