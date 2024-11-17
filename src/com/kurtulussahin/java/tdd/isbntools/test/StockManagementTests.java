@@ -18,13 +18,13 @@ public class StockManagementTests {
 
     @Before
     public void setup() {
+
         testWebService = mock(ExternalIsbnDataService.class);
         testDatabaseService = mock(ExternalIsbnDataService.class);
 
         stockManager = new StockManager();
         stockManager.setWebService(testWebService);
         stockManager.setDatabaseService(testDatabaseService);
-
     }
 
     @Test

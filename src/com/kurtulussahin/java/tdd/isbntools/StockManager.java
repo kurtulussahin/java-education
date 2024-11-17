@@ -24,8 +24,5 @@ public class StockManager {
         locator.append(book.getTitle().split(" ").length);
 
         return locator.toString();
-
     }
-
-
 }
