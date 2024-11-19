@@ -20,7 +20,6 @@ public class SimpleHttpServer {
 
         server.start();
         System.out.println("Sunucu başlatıldı. Port: " + port);
-
     }
 
     private static HttpServer getHttpServer(int port, String path) throws IOException {
@@ -60,7 +59,6 @@ public class SimpleHttpServer {
                 }
                 return;
             }
-
             // Yanıt olarak istek verilerini aynen geri gönder
             byte[] responseBytes = response.getBytes(StandardCharsets.UTF_8);
             exchange.sendResponseHeaders(200, responseBytes.length); // Yanıt başlığı gönderiliyor
