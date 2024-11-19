@@ -16,10 +16,6 @@ public class HttpEchoServer {
                 Socket clientSocket = serverSocket.accept();
                 System.out.println("Bir istemci bağlandı: " + clientSocket.getInetAddress());
 
-
-
-
-
                 // İstemci ile iletişim kuracak input ve output stream oluştur
                 BufferedReader input = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
                 OutputStream output = clientSocket.getOutputStream();
