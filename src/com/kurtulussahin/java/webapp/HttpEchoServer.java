@@ -16,6 +16,10 @@ public class HttpEchoServer {
                 Socket clientSocket = serverSocket.accept();
                 System.out.println("Bir istemci bağlandı: " + clientSocket.getInetAddress());
 
+
+
+
+
                 // İstemci ile iletişim kuracak input ve output stream oluştur
                 BufferedReader input = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
                 OutputStream output = clientSocket.getOutputStream();
@@ -23,7 +27,7 @@ public class HttpEchoServer {
                 // HTTP request'in ilk satırını al
                 String requestLine = input.readLine();
                 System.out.println("Gelen istek: " + requestLine);
-
+                System.out.println("Sunucu : " + serverSocket.getClass().getName());
                 // HTTP başlıklarını geç
                 String header;
                 String headers="";
@@ -33,7 +37,7 @@ public class HttpEchoServer {
                 }
 
                 // Echo edilen cevabı oluştur
-                String responseBody = "HTTP Echo Server: " + requestLine + "\n\nHeaders: \n " + headers;
+                String responseBody = "HTTP Echo Server " + serverSocket.getClass().getName() + " : " + requestLine + "\n\nHeaders: \n " + headers;
 
                 // HTTP response gönder
                 String httpResponse = "HTTP/1.1 200 OK\r\n" +
