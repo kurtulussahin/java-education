@@ -1,4 +1,4 @@
-package com.kurtulussahin.httpwebrest.httpservers;
+package com.kurtulussahin.httpwebrest.examples;
 
 import com.sun.net.httpserver.Headers;
 import com.sun.net.httpserver.HttpExchange;
