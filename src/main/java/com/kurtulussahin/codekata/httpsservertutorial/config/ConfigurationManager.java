@@ -1,5 +1,13 @@
 package com.kurtulussahin.codekata.httpsservertutorial.config;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.kurtulussahin.codekata.httpsservertutorial.util.Json;
+
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+
 public class ConfigurationManager {
 
     private static ConfigurationManager myConfigurationManager;
@@ -16,11 +24,41 @@ public class ConfigurationManager {
     }
 
 
-    public void  loadConfigurationFile(String filePath){
-        //TODO
+    public void  loadConfigurationFile(String filePath) {
+        FileReader fileReader = null;
+        try {
+            fileReader = new FileReader(filePath);
+        } catch (FileNotFoundException e) {
+            throw new HttpConfigurationException(e);
+        }
+        StringBuffer sBuffer = new StringBuffer();
+        int i;
+
+        try {
+            while((i=fileReader.read())!=-1){
+                sBuffer.append((char)i);
+            }
+        } catch (IOException e) {
+            throw new HttpConfigurationException(e);
+        }
+
+        JsonNode conf = null;
+        try {
+            conf = Json.parse(sBuffer.toString());
+        } catch (JsonProcessingException e) {
+            throw new HttpConfigurationException("Error parsing the Configuration file",e);
+        }
+        try {
+            myCurrentConfiguration=Json.fromJson(conf,Configuration.class);
+        } catch (JsonProcessingException e) {
+            throw new HttpConfigurationException("Error parsinf the Configuration File internal",e);
+        }
     }
 
-    public void getCurrentConfigurtion(){
-        //TODO
+    public Configuration getCurrentConfigurtion(){
+        if(myCurrentConfiguration==null){
+            throw new HttpConfigurationException("No Current Configuration Set.");
+        }
+        return myCurrentConfiguration;
     }
 }
