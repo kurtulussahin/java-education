@@ -1,4 +1,4 @@
-package com.kurtulussahin.webapp.httpservers;
+package com.kurtulussahin.httpwebrest.httpservers;
 
 import com.sun.net.httpserver.HttpServer;
 import com.sun.net.httpserver.HttpHandler;

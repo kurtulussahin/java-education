@@ -1,4 +1,4 @@
-package com.kurtulussahin.webapp.httpservers;
+package com.kurtulussahin.httpwebrest.httpservers;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

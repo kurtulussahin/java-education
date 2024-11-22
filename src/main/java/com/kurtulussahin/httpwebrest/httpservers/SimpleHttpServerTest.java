@@ -1,4 +1,4 @@
-package com.kurtulussahin.webapp.httpservers;
+package com.kurtulussahin.httpwebrest.httpservers;
 
 import com.sun.net.httpserver.HttpExchange;
 import org.junit.jupiter.api.Test;

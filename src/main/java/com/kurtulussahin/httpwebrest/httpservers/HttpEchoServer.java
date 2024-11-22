@@ -1,4 +1,4 @@
-package com.kurtulussahin.webapp.httpservers;
+package com.kurtulussahin.httpwebrest.httpservers;
 import java.io.*;
 import java.net.*;
 

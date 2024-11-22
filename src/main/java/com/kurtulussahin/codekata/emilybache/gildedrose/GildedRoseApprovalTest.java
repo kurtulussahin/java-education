@@ -19,20 +19,20 @@ public class GildedRoseApprovalTest {
 	  @Before
 	  public void setup() throws Exception {
 	    out = System.out;
-	    System.setOut(new PrintStream(new FileOutputStream("src/main/java/com/kurtulussahin/java/codekata/emilybache/gildedrose/lead")));
+	    System.setOut(new PrintStream(new FileOutputStream("src/main/java/com/kurtulussahin/codekata/emilybache/gildedrose/lead")));
 	  }
 
 	  @After
 	  public void teardown() {
 	    System.setOut(out);
-	    new File("src/main/java/com/kurtulussahin/java/codekata/emilybache/gildedrose/lead").delete();
+	    new File("src/main/java/com/kurtulussahin/codekata/emilybache/gildedrose/lead").delete();
 	  }
 
 	  @Test
 	  public void makeSureOutputMatchesgildedRoseOutputTestFile() throws Exception {
 		Program.main();
-	    BufferedReader lead = new BufferedReader(new FileReader("src/main/java/com/kurtulussahin/java/codekata/emilybache/gildedrose/lead"));
-	    BufferedReader gold = new BufferedReader(new FileReader("src/main/java/com/kurtulussahin/java/codekata/emilybache/gildedrose/gildedRoseOutputTestFile"));
+	    BufferedReader lead = new BufferedReader(new FileReader("src/main/java/com/kurtulussahin/codekata/emilybache/gildedrose/lead"));
+	    BufferedReader gold = new BufferedReader(new FileReader("src/main/java/com/kurtulussahin/codekata/emilybache/gildedrose/gildedRoseOutputTestFile"));
 	    String line;
 	    while ((line = gold.readLine()) != null) {
 	      assertEquals(line, lead.readLine());
