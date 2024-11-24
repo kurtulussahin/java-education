@@ -1,8 +1,8 @@
-package com.kurtulussahin.codekata.httpsservertutorial;
+package com.kurtulussahin.codekata.httpsservertutorial.httpserver;
 
-import com.kurtulussahin.codekata.httpsservertutorial.config.Configuration;
-import com.kurtulussahin.codekata.httpsservertutorial.config.ConfigurationManager;
-import com.kurtulussahin.codekata.httpsservertutorial.core.ServerListenerThread;
+import com.kurtulussahin.codekata.httpsservertutorial.httpserver.config.Configuration;
+import com.kurtulussahin.codekata.httpsservertutorial.httpserver.config.ConfigurationManager;
+import com.kurtulussahin.codekata.httpsservertutorial.httpserver.core.ServerListenerThread;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

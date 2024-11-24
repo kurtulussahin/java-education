@@ -1,4 +1,4 @@
-package com.kurtulussahin.codekata.httpsservertutorial.util;
+package com.kurtulussahin.codekata.httpsservertutorial.httpserver.util;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.*;

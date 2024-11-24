@@ -1,8 +1,8 @@
-package com.kurtulussahin.codekata.httpsservertutorial.config;
+package com.kurtulussahin.codekata.httpsservertutorial.httpserver.config;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
-import com.kurtulussahin.codekata.httpsservertutorial.util.Json;
+import com.kurtulussahin.codekata.httpsservertutorial.httpserver.util.Json;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;

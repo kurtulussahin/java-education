@@ -1,4 +1,4 @@
-package com.kurtulussahin.codekata.httpsservertutorial.config;
+package com.kurtulussahin.codekata.httpsservertutorial.httpserver.config;
 
 public class HttpConfigurationException extends RuntimeException {
 
