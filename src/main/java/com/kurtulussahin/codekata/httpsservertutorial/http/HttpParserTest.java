@@ -84,7 +84,6 @@ class HttpParserTest {
     }
 
 
-
     private InputStream generateValidTestCase(){
         String rawData = "GET / HTTP/1.1\r\n" +
                 "Host: localhost:8080\r\n" +
@@ -152,4 +151,5 @@ class HttpParserTest {
         InputStream inputStream = new ByteArrayInputStream( rawData.getBytes(StandardCharsets.US_ASCII));
         return inputStream;
     }
+
 }
