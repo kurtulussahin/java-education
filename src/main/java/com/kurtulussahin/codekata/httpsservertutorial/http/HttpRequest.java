@@ -1,13 +1,17 @@
 package com.kurtulussahin.codekata.httpsservertutorial.http;
 
+import java.util.HashMap;
+import java.util.Set;
+
 public class HttpRequest extends HttpMessage{
 
     private HttpMethod method;
     private String requestTarget;
     private String originalHttpVersion; //literal from the request
     private HttpVersion bestCompatibleHttpVersion;
+    private HashMap<String,String> headers = new HashMap<>();
 
-    HttpRequest(){
+    public HttpRequest(){
     }
 
     public HttpMethod getMethod(){
@@ -51,5 +55,17 @@ public class HttpRequest extends HttpMessage{
 
     public String getOriginalHttpVersion() {
         return originalHttpVersion;
+    }
+
+    public Set<String> getHeaderNames(){
+        return headers.keySet();
+    }
+
+    public String getHeader(String headerName){
+        return headers.get(headerName.toLowerCase());
+    }
+
+    void addHeader(String headerName, String headerField){
+        headers.put(headerName.toLowerCase(), headerField);
     }
 }
