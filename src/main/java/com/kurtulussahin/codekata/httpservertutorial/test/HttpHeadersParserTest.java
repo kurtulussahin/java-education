@@ -1,11 +1,9 @@
-package com.kurtulussahin.codekata.httpsservertutorial.test;
+package com.kurtulussahin.codekata.httpservertutorial.test;
 
-import com.kurtulussahin.codekata.httpsservertutorial.http.HttpParser;
-import com.kurtulussahin.codekata.httpsservertutorial.http.HttpParsingException;
-import com.kurtulussahin.codekata.httpsservertutorial.http.HttpRequest;
-import com.kurtulussahin.codekata.httpsservertutorial.http.HttpStatusCode;
-import com.sun.jdi.InvocationException;
-import org.hibernate.boot.archive.spi.InputStreamAccess;
+import com.kurtulussahin.codekata.httpservertutorial.http.HttpParser;
+import com.kurtulussahin.codekata.httpservertutorial.http.HttpParsingException;
+import com.kurtulussahin.codekata.httpservertutorial.http.HttpRequest;
+import com.kurtulussahin.codekata.httpservertutorial.http.HttpStatusCode;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;

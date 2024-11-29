@@ -1,4 +1,4 @@
-package com.kurtulussahin.codekata.httpsservertutorial.httpserver.config;
+package com.kurtulussahin.codekata.httpservertutorial.httpserver.config;
 
 public class Configuration {
       private int port;

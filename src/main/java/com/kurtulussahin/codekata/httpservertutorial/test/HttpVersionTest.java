@@ -1,7 +1,7 @@
-package com.kurtulussahin.codekata.httpsservertutorial.test;
+package com.kurtulussahin.codekata.httpservertutorial.test;
 
-import com.kurtulussahin.codekata.httpsservertutorial.http.BadHttpVersionException;
-import com.kurtulussahin.codekata.httpsservertutorial.http.HttpVersion;
+import com.kurtulussahin.codekata.httpservertutorial.http.BadHttpVersionException;
+import com.kurtulussahin.codekata.httpservertutorial.http.HttpVersion;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

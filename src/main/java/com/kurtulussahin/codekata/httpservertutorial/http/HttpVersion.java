@@ -1,4 +1,4 @@
-package com.kurtulussahin.codekata.httpsservertutorial.http;
+package com.kurtulussahin.codekata.httpservertutorial.http;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

@@ -1,4 +1,4 @@
-package com.kurtulussahin.codekata.httpsservertutorial.httpserver.core;
+package com.kurtulussahin.codekata.httpservertutorial.httpserver.core;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

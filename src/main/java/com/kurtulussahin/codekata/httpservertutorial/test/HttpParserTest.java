@@ -1,6 +1,6 @@
-package com.kurtulussahin.codekata.httpsservertutorial.test;
+package com.kurtulussahin.codekata.httpservertutorial.test;
 
-import com.kurtulussahin.codekata.httpsservertutorial.http.*;
+import com.kurtulussahin.codekata.httpservertutorial.http.*;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;

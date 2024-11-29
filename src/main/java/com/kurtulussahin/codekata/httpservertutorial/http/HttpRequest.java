@@ -1,4 +1,4 @@
-package com.kurtulussahin.codekata.httpsservertutorial.http;
+package com.kurtulussahin.codekata.httpservertutorial.http;
 
 import java.util.HashMap;
 import java.util.Set;
