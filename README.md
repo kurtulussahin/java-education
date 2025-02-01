@@ -12,8 +12,6 @@
 
 ### [Furkan Sönmez](https://www.udemy.com/user/furkan-47472/)
 
-[Clean Code - Robert C. Martin](https://www.udemy.com/course/clean-code-temiz-kod-yazma-sanati/learn/) - 7 hours
-
 [Effective Java - Joshua Bloch](https://www.udemy.com/course/ileriorta-seviye-java-dersleri-effective-java/learn) - 13 hours
 
 ### Emily Bache
