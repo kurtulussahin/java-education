@@ -24,9 +24,13 @@
 
 [Clean Code Fundamentals](https://www.oreilly.com/library/view/clean-code-fundamentals/9780134661742/) - 53 hours
 
+### Yegor Bugayenko
+
+[The Pain of OOP](https://www.youtube.com/watch?v=aLaDDoT2v54&list=PLaIsQH4uc08ytf8POIIAkkR4ZsRq8DFiV) - 10 hours
+
 ### Linkedin Learning
 
-[Practical Test-Driven Development for Java Programmers](https://www.linkedin.com/learning/practical-test-driven-development-for-java-programmers)
+[Practical Test-Driven Development for Java Programmers](https://www.linkedin.com/learning/practical-test-driven-development-for-java-programmers) - 3 hours
 
 ## Books
 
@@ -36,12 +40,19 @@ Head First Object-Oriented Analysis & Design
 
 Head First Design Patterns
 
+UML for Java Programmers - **Robert C. Martin**
 
+Clean Code: A Handbook of Agile Software Craftsmanship - **Robert C. Martin**
 
-UML for Java Programmers - Robert C. Martin
+Elegant Objects - **Yegor Bugayenko**
 
+Effective Java: **Joshua Bloch**
 
-Clean Code: A Handbook of Agile Software Craftsmanship - Robert C. Martin
+Tidy First? - **Kent Beck**
+
+Program Development in Java - **Barbara Liskov**
+
+A Philosophy of Software Design -  **John Ousterhout** 
 
 
 ## Data Structures & Algorithms Problems
