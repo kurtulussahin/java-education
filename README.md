@@ -2,7 +2,7 @@
 
 ## Video Courses
 
-### [Akin Kaldiroğlu](https://www.udemy.com/user/akinkaldiroglu)
+### Akin Kaldiroğlu
 
 [Java ile Nesne-Merkezli Programlamaya Giriş](https://www.udemy.com/course/java-ile-nesne-merkezli-programlamaya-giris/learn) - 38 hours
 
@@ -10,7 +10,7 @@
 
 [Design Patterns](https://www.udemy.com/course/designpatterns/learn/) - 28 hours
 
-### [Furkan Sönmez](https://www.udemy.com/user/furkan-47472/)
+### Furkan Sönmez
 
 [Effective Java - Joshua Bloch](https://www.udemy.com/course/ileriorta-seviye-java-dersleri-effective-java/learn) - 13 hours
 
