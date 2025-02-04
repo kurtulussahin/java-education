@@ -1,4 +1,4 @@
-package com.kurtulussahin.headfirstobjectorientedanalysisanddesign;
+package com.kurtulussahin.headfirstobjectorientedanalysisanddesign.rickguitarshop;
 
 public class Guitar {
 
