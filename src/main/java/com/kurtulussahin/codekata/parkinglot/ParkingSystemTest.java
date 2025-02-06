@@ -40,7 +40,7 @@ public class ParkingSystemTest {
         ParkingAttendant attendant = new ParkingAttendant();
         Payment payment = new CashTransaction();
         payment.amount = 15.0;
-        ParkingLot.ExitPanel exitPanel = lot.new ExitPanel();
+        ExitPanel exitPanel = new ExitPanel();
         exitPanel.id = "Exit1";
         exitPanel.scanTicket(ticket);
         exitPanel.processPayment(ticket, payment);

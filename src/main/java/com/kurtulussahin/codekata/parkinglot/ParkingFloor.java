@@ -6,9 +6,15 @@ import java.util.List;
 class ParkingFloor {
     String name;
     List<ParkingSpot> spots = new ArrayList<>();
+    CustomerInfoPortal infoPortal;
+    ParkingDisplayBoard displayBoard;
 
     public void updateDisplayBoard() {
         // Update display board
+    }
+
+    public void addParkingSpot(ParkingSpot spot) {
+        spots.add(spot);
     }
 
     public void assignVehicleToSlot(Vehicle vehicle) {

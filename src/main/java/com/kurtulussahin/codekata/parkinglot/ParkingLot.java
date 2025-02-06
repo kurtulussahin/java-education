@@ -9,9 +9,20 @@ import java.util.UUID;
 class ParkingLot {
     String id;
     String address;
+    ParkingRate rate;
+    ParkingTicket ticket;
+    ParkingAttendantPortal portal;
     List<ParkingFloor> floors = new ArrayList<>();
     List<EntrancePanel> entrancePanels = new ArrayList<>();
     List<ExitPanel> exitPanels = new ArrayList<>();
+
+    public boolean addParkingFloor(ParkingFloor floor) {
+        return floors.add(floor);
+    }
+
+    public boolean addEntrancePanel(EntrancePanel panel) {
+        return entrancePanels.add(panel);
+    }
 
     public boolean isFull() {
         for (ParkingFloor floor : floors) {
@@ -32,36 +43,4 @@ class ParkingLot {
         return ticket;
     }
 
-    class EntrancePanel {
-        String id;
-
-        public boolean printTicket(ParkingTicket ticket) {
-            if (ticket != null) {
-                System.out.println("Ticket printed: " + ticket.ticketNumber);
-                return true;
-            }
-            return false;
-        }
-    }
-
-    class ExitPanel {
-        String id;
-
-        public boolean scanTicket(ParkingTicket ticket) {
-            if (ticket != null) {
-                System.out.println("Ticket scanned: " + ticket.ticketNumber);
-                return true;
-            }
-            return false;
-        }
-
-        public boolean processPayment(ParkingTicket ticket, Payment payment) {
-            if (ticket != null && payment != null) {
-                payment.initiateTransaction();
-                System.out.println("Payment processed for ticket: " + ticket.ticketNumber);
-                return true;
-            }
-            return false;
-        }
-    }
 }
