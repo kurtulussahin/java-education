@@ -9,34 +9,17 @@ public class CreateProductDemo {
 
     public static void main(String[] args) {
 
-
         SessionFactory factory = new Configuration()
                 .configure("/hibernate.cfg.xml")
                 .addAnnotatedClass(Product.class)
                 .buildSessionFactory();
-
-        // create session
-        Session session = factory.getCurrentSession();
-
-
+        Session session = factory.openSession();
         try {
-
-            System.out.println("Creating new product object...");
             Product product = new Product("Laptop", 2000, "A laptop", true);
-            System.out.println("Product created: " + product);
-
-            // start a transaction
             session.beginTransaction();
-
-            // save the student object
-            System.out.println("Saving the product...");
             session.save(product);
-
-            // commit transaction
             session.getTransaction().commit();
-
             System.out.println("Done!");
-
         } catch (Exception e) {
             throw new RuntimeException(e);
         } finally {

@@ -23,11 +23,41 @@ public class Product {
     @Column(name="isFeatured")
     private boolean isFeatured;
 
-    public Product(String name, double unitPrice, String description, boolean isFeatured) {
+    public Product() {
+    }
 
+    public Product(String name, double unitPrice, String description, boolean isFeatured) {
+        this.productID = productID;
         this.name = name;
         this.unitPrice = unitPrice;
         this.description = description;
         this.isFeatured = isFeatured;
+    }
+    public Product(int productID, String name, double unitPrice, String description, boolean isFeatured) {
+        this.productID = productID;
+        this.name = name;
+        this.unitPrice = unitPrice;
+        this.description = description;
+        this.isFeatured = isFeatured;
+    }
+
+    public int getProductID() {
+        return productID;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public double getUnitPrice() {
+        return unitPrice;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public boolean isFeatured() {
+        return isFeatured;
     }
 }
