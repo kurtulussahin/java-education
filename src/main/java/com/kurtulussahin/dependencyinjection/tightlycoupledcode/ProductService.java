@@ -1,6 +1,5 @@
 package com.kurtulussahin.dependencyinjection.tightlycoupledcode;
 
-import org.hibernate.Session;
 import org.hibernate.query.Query;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -8,7 +7,6 @@ import java.util.stream.Collectors;
 public class ProductService implements AutoCloseable {
 
     private final CommerceContext dbContext = new CommerceContext();
-    private final Session session = dbContext.getSession();
 
     public ProductService() {
         dbContext.getSession().beginTransaction();
@@ -22,7 +20,7 @@ public class ProductService implements AutoCloseable {
     }
 
     private List<Product> getFeaturedProducts() {
-        Query<Product> query = session.createQuery("FROM Product where isfeatured='true'", Product.class);
+        Query<Product> query = dbContext.getSession().createQuery("FROM Product where isfeatured='true'", Product.class);
         List<Product> featuredProducts = query.getResultList();
         return featuredProducts;
     }
@@ -41,8 +39,8 @@ public class ProductService implements AutoCloseable {
 
     @Override
     public void close() {
-        if (session != null && session.isOpen()) {
-            session.close();
+        if (dbContext.getSession() != null && dbContext.getSession().isOpen()) {
+            dbContext.getSession().close();
             System.out.println("Session is closed.");
         }
     }
