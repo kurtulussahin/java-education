@@ -22,10 +22,12 @@ public class AppTest {
         });
         thread.setDaemon(true);
         thread.start();
-
-        String response = new JdkRequest("http://localhost:12345")
-            .fetch().as(RestResponse.class).body();
-        MatcherAssert.assertThat(response, Matchers.containsString("Hello, world!"));
+        for (int attempt = 0; attempt < 10; attempt++) {
+            String response = new JdkRequest("http://localhost:12345")
+                    .fetch().as(RestResponse.class).body();
+            MatcherAssert.assertThat(response, Matchers.containsString("Hello, world!"));
+        }
+        thread.interrupt();
         thread.join();
     }
 }
