@@ -12,7 +12,20 @@ public class AppTest {
     public void testWorks() throws Exception {
         int port = 12345;
         final Thread thread = new Thread(() -> {
-            App app = new App();
+            App app = new App(
+                    new App.Resource() {
+                        @Override
+                        public App.Resource refine(String name, String value) {
+                            return this;
+                        }
+                        @Override
+                        public void print(App.Output output) {
+                            output.print("Content-Type", "text/plain");
+                            output.print("Content-length", "13");
+                            output.print("X-Body", "Hello, world!");
+                        }
+                    }
+            );
             try {
                 app.start(port);
             } catch (Exception e) {
