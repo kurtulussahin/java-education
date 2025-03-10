@@ -1,4 +1,4 @@
-package com.kurtulussahin.designpatterns.coomposabledecorators.yegorbugayenko.textexample;
+package com.kurtulussahin.designpatterns.coomposabledecorators.yegorbugayenko.textexample1;
 
 public class TextTest {
 

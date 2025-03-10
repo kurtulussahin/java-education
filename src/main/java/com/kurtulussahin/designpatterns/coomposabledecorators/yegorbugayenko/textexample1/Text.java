@@ -1,4 +1,4 @@
-package com.kurtulussahin.designpatterns.coomposabledecorators.yegorbugayenko.textexample;
+package com.kurtulussahin.designpatterns.coomposabledecorators.yegorbugayenko.textexample1;
 
 import java.io.File;
 import java.io.IOException;
