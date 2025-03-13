@@ -19,7 +19,7 @@ public class PumpController {
         return new Random().nextInt(100);
     }
 
-    static void controlPump() {
+    public static void controlPump() {
 
         int waterLevel = readWaterSensor();
         int gasLevel = readGasSensor();
