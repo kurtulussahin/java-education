@@ -4,17 +4,19 @@ public class MinePumpSystemTest {
 
     public static void main(String[] args) {
 
-        MinePlant minePlant = new MinePlant();
+        Input fakeWaterInput = new FakeInput();
         int count=0;
         while (count<100) {
-            System.out.print("Döngü " + (count + 1) + "->");
-
+            System.out.println("Döngü " + (count + 1) + "->");
 
             new MinePlant(
-                    new PumpEngine(),
                     new SumpPump(
-                            new PumpEngine(),
-                            new SumpProbe(89,90))
+                            new PumpEngine(new DigitalOutput("Engine")),
+                            new SumpProbe(
+                                    new LevelSensor("Min Level Sensor",80,new DigitalInput(fakeWaterInput)),
+                                    new LevelSensor("Max Level Sensor",90,new DigitalInput(fakeWaterInput))
+                            )
+                    )
             ).run();
 
             count++;

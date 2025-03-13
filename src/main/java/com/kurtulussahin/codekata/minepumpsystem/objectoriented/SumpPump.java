@@ -6,6 +6,7 @@ public class SumpPump {
     private final SumpProbe sumpProbe;
 
     public SumpPump(PumpEngine pumpEngine, SumpProbe sumpProbe) {
+
         this.pumpEngine = pumpEngine;
         this.sumpProbe = sumpProbe;
     }
@@ -18,6 +19,4 @@ public class SumpPump {
             pumpEngine.off();
         }
     }
-
-
 }

@@ -1,32 +1,35 @@
 package com.kurtulussahin.codekata.minepumpsystem.objectoriented;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class PumpEngine {
 
-    private boolean isRunning = false;
+    private final boolean[] isRunning=new boolean[1];
+    private final DigitalOutput digitalOutput;
 
-    public PumpEngine() {
-        this.isRunning = false;
+    public PumpEngine(DigitalOutput digitalOutput) {
+
+        this.digitalOutput = digitalOutput;
     }
 
     void on() {
-        if (!isRunning) {
-            isRunning = true;
-            System.out.println("Pump Engine is running");
+
+        if (!isRunning[0]) {
+            isRunning[0] = true;
+            digitalOutput.write("Pump Engine is running");
         } else {
-            System.out.println("Pump Engine is already running");
+            digitalOutput.write("Pump Engine is already running");
         }
     }
 
     void off() {
-        if (isRunning) {
-            isRunning = false;
-            System.out.println("Pump Engine is closing");
-        } else {
-            System.out.println("Pump Engine is already closed");
-        }
-    }
 
-    void status() {
-        System.out.println("Pump Engine is " + isRunning);
+        if (isRunning[0]) {
+            isRunning[0] = false;
+            digitalOutput.write("Pump Engine is closing");
+        } else {
+            digitalOutput.write("Pump Engine is already closed");
+        }
     }
 }

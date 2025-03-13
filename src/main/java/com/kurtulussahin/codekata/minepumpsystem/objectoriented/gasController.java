@@ -12,7 +12,7 @@ public class gasController {
 
     public static void controlGas(PumpEngine pumpEngine) {
         int gasLevel = readGasSensor();
-        System.out.print("Gaz Seviyesi: " + gasLevel);
+        System.out.println("Gaz Seviyesi: " + gasLevel);
 
         if (gasLevel > GAS_THRESHOLD) {
             System.out.println("⚠️ Tehlikeli gaz algılandı");

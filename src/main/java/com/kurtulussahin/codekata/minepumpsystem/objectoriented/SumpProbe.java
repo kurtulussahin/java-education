@@ -1,40 +1,33 @@
 package com.kurtulussahin.codekata.minepumpsystem.objectoriented;
 
-import java.util.Random;
+import java.util.ArrayList;
+import java.util.List;
 
 public class SumpProbe {
 
-    private final int minWaterThreshold;
-    private final int maxWaterThreshold;
-    private  boolean mustDrain;
+    private final LevelSensor minLevelSensor;
+    private final LevelSensor maxLevelSensor;
+    private final boolean[] mustDrain=new boolean[1];
+    private final DigitalOutput digitalOutput;
 
-    static int readWaterSensor() {
-        return new Random().nextInt(100);
-    }
+    public SumpProbe(LevelSensor minLevelSensor, LevelSensor maxLevelSensor) {
 
-    public SumpProbe(int minWaterThreshold, int maxWaterThreshold) {
-        this.minWaterThreshold = minWaterThreshold;
-        this.maxWaterThreshold = maxWaterThreshold;
-        mustDrain = false;
+        this.minLevelSensor = minLevelSensor;
+        this.maxLevelSensor = maxLevelSensor;
+        this.digitalOutput = new DigitalOutput("Sump Probe");
     }
 
     public boolean mustDrain() {
 
-        int waterLevel = readWaterSensor();
-        System.out.println(" | Su Seviyesi: " + waterLevel );
-
-        if (waterLevel > maxWaterThreshold) {
-            System.out.println("💧 Su seviyesi yüksek!");
-            mustDrain = true;
-            return mustDrain;
-        } else if (waterLevel > minWaterThreshold) {
-            System.out.println("💧 Su seviyesi takip seviyesinde!");
-            return mustDrain;
+        if (maxLevelSensor.isOn()) {
+            digitalOutput.write("💧 Su seviyesi yüksek!");
+            mustDrain[0]=true;
+        } else if (minLevelSensor.isOn()) {
+            digitalOutput.write("💧 Su seviyesi takip seviyesinde!");
         } else {
-            System.out.println("💧 Su seviyesi güvenli!");
-            mustDrain = false;
-            return false;
+            digitalOutput.write("💧 Su seviyesi güvenli!");
+            mustDrain[0]=false;
         }
-
+        return mustDrain[0];
     }
 }
