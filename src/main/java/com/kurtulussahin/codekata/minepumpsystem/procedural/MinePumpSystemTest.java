@@ -1,15 +1,16 @@
 package com.kurtulussahin.codekata.minepumpsystem.procedural;
 
+import static com.kurtulussahin.codekata.minepumpsystem.procedural.PumpController.controlPump;
+
 public class MinePumpSystemTest {
 
     public static void main(String[] args) {
 
-        PumpController minePumpSystem = new PumpController();
 
         int count=0;
         while (count<100) {
             System.out.print("Döngü " + (count + 1) + "->");
-            minePumpSystem.controlPump();
+            controlPump();
             count++;
         }
     }
