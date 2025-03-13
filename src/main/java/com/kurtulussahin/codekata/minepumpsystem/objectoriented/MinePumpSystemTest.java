@@ -8,7 +8,15 @@ public class MinePumpSystemTest {
         int count=0;
         while (count<100) {
             System.out.print("Döngü " + (count + 1) + "->");
-            minePlant.run();
+
+
+            new MinePlant(
+                    new PumpEngine(),
+                    new SumpPump(
+                            new PumpEngine(),
+                            new SumpProbe(89,90))
+            ).run();
+
             count++;
         }
     }
