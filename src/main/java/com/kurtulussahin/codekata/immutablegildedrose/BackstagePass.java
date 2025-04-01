@@ -2,9 +2,9 @@ package com.kurtulussahin.codekata.immutablegildedrose;
 
 public class BackstagePass implements Item{
 
-    public String name;
-    public int sellIn;
-    public int quality;
+    private final String name;
+    private final int sellIn;
+    private final int quality;
 
     public BackstagePass(String name, int sellIn, int quality) {
         this.name = name;
@@ -13,28 +13,31 @@ public class BackstagePass implements Item{
     }
 
     @Override
-    public void update() {
-        if (quality < 50) {
-            quality = quality + 1;
+    public Item update() {
+        int newSellIn=sellIn;
+        int newQuality = quality;
+        if (newQuality < 50) {
+            newQuality = newQuality + 1;
 
-            if (sellIn < 11) {
-                if (quality < 50) {
-                    quality = quality + 1;
+            if (newSellIn < 11) {
+                if (newQuality < 50) {
+                    newQuality = newQuality + 1;
                 }
             }
 
-            if (sellIn < 6) {
-                if (quality < 50) {
-                    quality = quality + 1;
+            if (newSellIn < 6) {
+                if (newQuality < 50) {
+                    newQuality = newQuality + 1;
                 }
             }
         }
 
-        sellIn = sellIn - 1;
+        newSellIn = newSellIn - 1;
 
-        if (sellIn < 0) {
-            quality = 0;
+        if (newSellIn < 0) {
+            newQuality = 0;
         }
+        return new BackstagePass(name,newSellIn,newQuality);
     }
 
     @Override

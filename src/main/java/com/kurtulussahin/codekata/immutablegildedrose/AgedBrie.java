@@ -2,9 +2,9 @@ package com.kurtulussahin.codekata.immutablegildedrose;
 
 public class AgedBrie implements Item{
 
-    public String name;
-    public int sellIn;
-    public int quality;
+    private final String name;
+    private final int sellIn;
+    private final int quality;
 
     public AgedBrie(String name, int sellIn, int quality) {
         this.name = name;
@@ -13,18 +13,19 @@ public class AgedBrie implements Item{
     }
 
     @Override
-    public void update() {
-        if (quality < 50) {
-            quality = quality + 1;
+    public Item update() {
+        int newSellIn=sellIn;
+        int newQuality = quality;
+        if (newQuality < 50) {
+            newQuality = newQuality + 1;
         }
-
-        sellIn = sellIn - 1;
-
-        if (sellIn < 0) {
-            if (quality < 50) {
-                quality = quality + 1;
+        newSellIn = newSellIn - 1;
+        if (newSellIn < 0) {
+            if (newQuality < 50) {
+                newQuality = newQuality + 1;
             }
         }
+        return new AgedBrie(name,newSellIn, newQuality);
     }
 
     @Override

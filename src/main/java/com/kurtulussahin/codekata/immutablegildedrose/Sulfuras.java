@@ -2,9 +2,9 @@ package com.kurtulussahin.codekata.immutablegildedrose;
 
 public class Sulfuras implements Item{
 
-    public String name;
-    public int sellIn;
-    public int quality;
+    private final String name;
+    private final int sellIn;
+    private final int quality;
 
     public Sulfuras(String name, int sellIn, int quality) {
         this.name = name;
@@ -13,8 +13,9 @@ public class Sulfuras implements Item{
     }
 
     @Override
-    public void update() {
+    public Item update() {
         //Sulfuras does not get updated
+        return this;
     }
 
     @Override

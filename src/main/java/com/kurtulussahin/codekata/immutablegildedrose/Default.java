@@ -2,9 +2,9 @@ package com.kurtulussahin.codekata.immutablegildedrose;
 
 public class Default implements Item {
 
-    public String name;
-    public int sellIn;
-    public int quality;
+    private final String name;
+    private final int sellIn;
+    private final int quality;
 
     public Default(String name, int sellIn, int quality) {
         this.name = name;
@@ -13,17 +13,20 @@ public class Default implements Item {
     }
 
     @Override
-    public void update() {
-        if (quality > 0) {
-            quality = quality - 1;
+    public Item update() {
+        int newSellIn=sellIn;
+        int newQuality = quality;
+        if (newQuality > 0) {
+            newQuality = newQuality - 1;
         }
-        sellIn = sellIn - 1;
+        newSellIn = newSellIn - 1;
 
-        if (sellIn < 0) {
-            if (quality > 0) {
-                quality = quality - 1;
+        if (newSellIn < 0) {
+            if (newQuality > 0) {
+                newQuality = newQuality - 1;
             }
         }
+        return new Default(name,newSellIn,newQuality);
     }
 
     @Override
