@@ -11,10 +11,11 @@ class Game {
     }
 
     public void run() {
-        while (magicNumber.isSecret()) {
-            guess.start();
-            magicNumber.compare(guess);
-        }
+
+            do {
+                guess.start();
+            } while (!magicNumber.compare(guess));
+
     }
 
 
