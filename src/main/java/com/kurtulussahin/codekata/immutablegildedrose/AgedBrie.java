@@ -1,6 +1,6 @@
 package com.kurtulussahin.codekata.immutablegildedrose;
 
-public class AgedBrie implements Item{
+public final class AgedBrie implements Item{
 
     private final String name;
     private final int sellIn;

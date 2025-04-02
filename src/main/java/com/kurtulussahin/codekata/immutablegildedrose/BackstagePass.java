@@ -1,6 +1,6 @@
 package com.kurtulussahin.codekata.immutablegildedrose;
 
-public class BackstagePass implements Item{
+public final class BackstagePass implements Item{
 
     private final String name;
     private final int sellIn;

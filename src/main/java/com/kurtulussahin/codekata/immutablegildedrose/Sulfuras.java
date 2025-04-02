@@ -1,6 +1,6 @@
 package com.kurtulussahin.codekata.immutablegildedrose;
 
-public class Sulfuras implements Item{
+public final class Sulfuras implements Item{
 
     private final String name;
     private final int sellIn;

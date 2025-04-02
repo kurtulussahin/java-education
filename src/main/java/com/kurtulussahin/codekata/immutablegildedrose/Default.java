@@ -1,6 +1,6 @@
 package com.kurtulussahin.codekata.immutablegildedrose;
 
-public class Default implements Item {
+public final class Default implements Item {
 
     private final String name;
     private final int sellIn;
